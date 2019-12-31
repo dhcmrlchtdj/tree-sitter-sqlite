@@ -1,0 +1,14 @@
+{
+    "name": "tree-sitter-sql",
+    "version": "0.0.0",
+    "description": "SQL grammar for node-tree-sitter",
+    "main": "index.js",
+    "author": "h11 <nirisix@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "nan": "2.14.0"
+    },
+    "devDependencies": {
+        "tree-sitter-cli": "0.16.2"
+    }
+}
