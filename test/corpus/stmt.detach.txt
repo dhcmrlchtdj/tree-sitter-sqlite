@@ -1,0 +1,12 @@
+==================
+stmt.detach
+==================
+
+DETACH schema;
+DETACH DATABASE schema;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (detach_stmt (DETACH) (identifier)))
+ (sql_stmt (detach_stmt (DETACH) (DATABASE) (identifier))))

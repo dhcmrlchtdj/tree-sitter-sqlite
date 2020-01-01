@@ -1,0 +1,12 @@
+==================
+stmt.release
+==================
+
+RELEASE point;
+RELEASE SAVEPOINT point;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (release_stmt (RELEASE) (identifier)))
+ (sql_stmt (release_stmt (RELEASE) (SAVEPOINT) (identifier))))

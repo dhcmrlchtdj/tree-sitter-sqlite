@@ -1,0 +1,74 @@
+==================
+literal.string
+==================
+
+SELECT 'this is string';
+SELECT 'escape''';
+
+---
+
+(sql_stmt_list
+ (sql_stmt (select_stmt (SELECT) (string_literal)))
+ (sql_stmt (select_stmt (SELECT) (string_literal))))
+
+==================
+literal.blob
+==================
+
+SELECT x'this is blob';
+SELECT X'this is blob';
+
+SELECT x'escape''';
+
+---
+
+(sql_stmt_list
+ (sql_stmt (select_stmt (SELECT) (blob_literal)))
+ (sql_stmt (select_stmt (SELECT) (blob_literal)))
+ (sql_stmt (select_stmt (SELECT) (blob_literal))))
+
+==================
+literal.integer
+==================
+
+SELECT 0;
+SELECT 123;
+
+SELECT 0x0a;
+SELECT 0x0A;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal))))
+
+==================
+literal.float
+==================
+
+SELECT .1;
+SELECT 0.1;
+SELECT 1.1;
+
+SELECT 1e1;
+SELECT 1.e1;
+SELECT 1.1e1;
+
+SELECT 1e+1;
+SELECT 1e-1;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal)))
+ (sql_stmt (select_stmt (SELECT) (numeric_literal))))
+

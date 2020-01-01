@@ -1,11 +1,6413 @@
 [
   {
-    "type": "source_file",
+    "type": "alter_table_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ADD",
+          "named": true
+        },
+        {
+          "type": "ALTER",
+          "named": true
+        },
+        {
+          "type": "COLUMN",
+          "named": true
+        },
+        {
+          "type": "DROP",
+          "named": true
+        },
+        {
+          "type": "RENAME",
+          "named": true
+        },
+        {
+          "type": "TABLE",
+          "named": true
+        },
+        {
+          "type": "TO",
+          "named": true
+        },
+        {
+          "type": "column_def",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "analyze_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ANALYZE",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attach_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "ATTACH",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DATABASE",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "begin_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "BEGIN",
+          "named": true
+        },
+        {
+          "type": "DEFERRED",
+          "named": true
+        },
+        {
+          "type": "EXCLUSIVE",
+          "named": true
+        },
+        {
+          "type": "IMMEDIATE",
+          "named": true
+        },
+        {
+          "type": "TRANSACTION",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "bind_parameter",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "blob_literal",
     "named": true,
     "fields": {}
   },
   {
-    "type": "hello",
+    "type": "collation_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "column_constraint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ALWAYS",
+          "named": true
+        },
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "ASC",
+          "named": true
+        },
+        {
+          "type": "AUTOINCREMENT",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "CHECK",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CONSTRAINT",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DEFAULT",
+          "named": true
+        },
+        {
+          "type": "DESC",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GENERATED",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "KEY",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "PRIMARY",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "STORED",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "UNIQUE",
+          "named": true
+        },
+        {
+          "type": "VIRTUAL",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "conflict_clause",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "foreign_key_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "signed_number",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "column_def",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "column_constraint",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "commit_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "COMMIT",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "TRANSACTION",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "common_table_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "MATERIALIZED",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conflict_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ABORT",
+          "named": true
+        },
+        {
+          "type": "CONFLICT",
+          "named": true
+        },
+        {
+          "type": "FAIL",
+          "named": true
+        },
+        {
+          "type": "IGNORE",
+          "named": true
+        },
+        {
+          "type": "ON",
+          "named": true
+        },
+        {
+          "type": "REPLACE",
+          "named": true
+        },
+        {
+          "type": "ROLLBACK",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "create_index_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "CREATE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "INDEX",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "ON",
+          "named": true
+        },
+        {
+          "type": "UNIQUE",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "indexed_column",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "create_table_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "CREATE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "ROWID",
+          "named": true
+        },
+        {
+          "type": "TABLE",
+          "named": true
+        },
+        {
+          "type": "TEMP",
+          "named": true
+        },
+        {
+          "type": "TEMPORARY",
+          "named": true
+        },
+        {
+          "type": "WITHOUT",
+          "named": true
+        },
+        {
+          "type": "column_def",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "table_constraint",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "create_trigger_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AFTER",
+          "named": true
+        },
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BEFORE",
+          "named": true
+        },
+        {
+          "type": "BEGIN",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CREATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DELETE",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "EACH",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FOR",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "INSERT",
+          "named": true
+        },
+        {
+          "type": "INSTEAD",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OF",
+          "named": true
+        },
+        {
+          "type": "ON",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "ROW",
+          "named": true
+        },
+        {
+          "type": "TEMP",
+          "named": true
+        },
+        {
+          "type": "TEMPORARY",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRIGGER",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "UPDATE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "delete_stmt",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "insert_stmt",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        },
+        {
+          "type": "update_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "create_view_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "CREATE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "TEMP",
+          "named": true
+        },
+        {
+          "type": "TEMPORARY",
+          "named": true
+        },
+        {
+          "type": "VIEW",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "create_virtual_table_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "CREATE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "TABLE",
+          "named": true
+        },
+        {
+          "type": "USING",
+          "named": true
+        },
+        {
+          "type": "VIRTUAL",
+          "named": true
+        },
+        {
+          "type": "column_def",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "table_constraint",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "delete_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DELETE",
+          "named": true
+        },
+        {
+          "type": "FROM",
+          "named": true
+        },
+        {
+          "type": "limit_clause",
+          "named": true
+        },
+        {
+          "type": "order_by_clause",
+          "named": true
+        },
+        {
+          "type": "qualified_table_name",
+          "named": true
+        },
+        {
+          "type": "returning_clause",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        },
+        {
+          "type": "with_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "detach_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DATABASE",
+          "named": true
+        },
+        {
+          "type": "DETACH",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "drop_index_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DROP",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "INDEX",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "drop_table_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DROP",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "TABLE",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "drop_trigger_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DROP",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "TRIGGER",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "drop_view_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DROP",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "VIEW",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "error_message",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "filename",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "filter_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FILTER",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "WHERE",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "foreign_key_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ACTION",
+          "named": true
+        },
+        {
+          "type": "CASCADE",
+          "named": true
+        },
+        {
+          "type": "DEFAULT",
+          "named": true
+        },
+        {
+          "type": "DEFERRABLE",
+          "named": true
+        },
+        {
+          "type": "DELETE",
+          "named": true
+        },
+        {
+          "type": "INITIALLY",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NO",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "ON",
+          "named": true
+        },
+        {
+          "type": "REFERENCES",
+          "named": true
+        },
+        {
+          "type": "RESTRICT",
+          "named": true
+        },
+        {
+          "type": "SET",
+          "named": true
+        },
+        {
+          "type": "UPDATE",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "frame_spec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXCLUDE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FOLLOWING",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "GROUP",
+          "named": true
+        },
+        {
+          "type": "GROUPS",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "OTHERS",
+          "named": true
+        },
+        {
+          "type": "PRECEDING",
+          "named": true
+        },
+        {
+          "type": "RANGE",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "ROW",
+          "named": true
+        },
+        {
+          "type": "ROWS",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TIES",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "UNBOUNDED",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "from_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "FROM",
+          "named": true
+        },
+        {
+          "type": "join_constraint",
+          "named": true
+        },
+        {
+          "type": "join_operator",
+          "named": true
+        },
+        {
+          "type": "table_or_subquery",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "function_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "group_by_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "BY",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "GROUP",
+          "named": true
+        },
+        {
+          "type": "HAVING",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "indexed_column",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "ASC",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DESC",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "insert_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ABORT",
+          "named": true
+        },
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DEFAULT",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FAIL",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IGNORE",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "INSERT",
+          "named": true
+        },
+        {
+          "type": "INTO",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "REPLACE",
+          "named": true
+        },
+        {
+          "type": "ROLLBACK",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "VALUES",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "returning_clause",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        },
+        {
+          "type": "upsert_clause",
+          "named": true
+        },
+        {
+          "type": "with_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "join_constraint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "ON",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "USING",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "join_operator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "CROSS",
+          "named": true
+        },
+        {
+          "type": "INNER",
+          "named": true
+        },
+        {
+          "type": "JOIN",
+          "named": true
+        },
+        {
+          "type": "LEFT",
+          "named": true
+        },
+        {
+          "type": "NATURAL",
+          "named": true
+        },
+        {
+          "type": "OUTER",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "limit_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "LIMIT",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OFFSET",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "order_by_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "BY",
+          "named": true
+        },
+        {
+          "type": "ORDER",
+          "named": true
+        },
+        {
+          "type": "ordering_term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ordering_term",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "ASC",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DESC",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FIRST",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LAST",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "NULLS",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "over_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "BY",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "ORDER",
+          "named": true
+        },
+        {
+          "type": "OVER",
+          "named": true
+        },
+        {
+          "type": "PARTITION",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "frame_spec",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "ordering_term",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pragma_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "PRAGMA",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "pragma_value",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "pragma_value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "signed_number",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "qualified_table_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BY",
+          "named": true
+        },
+        {
+          "type": "INDEXED",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "raise_function",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ABORT",
+          "named": true
+        },
+        {
+          "type": "FAIL",
+          "named": true
+        },
+        {
+          "type": "IGNORE",
+          "named": true
+        },
+        {
+          "type": "RAISE",
+          "named": true
+        },
+        {
+          "type": "ROLLBACK",
+          "named": true
+        },
+        {
+          "type": "error_message",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reindex_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "REINDEX",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "release_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "RELEASE",
+          "named": true
+        },
+        {
+          "type": "SAVEPOINT",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "returning_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "RETURNING",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rollback_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ROLLBACK",
+          "named": true
+        },
+        {
+          "type": "SAVEPOINT",
+          "named": true
+        },
+        {
+          "type": "TO",
+          "named": true
+        },
+        {
+          "type": "TRANSACTION",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "savepoint_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "SAVEPOINT",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "select_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ALL",
+          "named": true
+        },
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXCEPT",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "INTERSECT",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "SELECT",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "UNION",
+          "named": true
+        },
+        {
+          "type": "VALUES",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "from_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "group_by_clause",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "limit_clause",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "order_by_clause",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        },
+        {
+          "type": "window_clause",
+          "named": true
+        },
+        {
+          "type": "with_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "signed_number",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "numeric_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sql_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "EXPLAIN",
+          "named": true
+        },
+        {
+          "type": "PLAN",
+          "named": true
+        },
+        {
+          "type": "QUERY",
+          "named": true
+        },
+        {
+          "type": "alter_table_stmt",
+          "named": true
+        },
+        {
+          "type": "analyze_stmt",
+          "named": true
+        },
+        {
+          "type": "attach_stmt",
+          "named": true
+        },
+        {
+          "type": "begin_stmt",
+          "named": true
+        },
+        {
+          "type": "commit_stmt",
+          "named": true
+        },
+        {
+          "type": "create_index_stmt",
+          "named": true
+        },
+        {
+          "type": "create_table_stmt",
+          "named": true
+        },
+        {
+          "type": "create_trigger_stmt",
+          "named": true
+        },
+        {
+          "type": "create_view_stmt",
+          "named": true
+        },
+        {
+          "type": "create_virtual_table_stmt",
+          "named": true
+        },
+        {
+          "type": "delete_stmt",
+          "named": true
+        },
+        {
+          "type": "detach_stmt",
+          "named": true
+        },
+        {
+          "type": "drop_index_stmt",
+          "named": true
+        },
+        {
+          "type": "drop_table_stmt",
+          "named": true
+        },
+        {
+          "type": "drop_trigger_stmt",
+          "named": true
+        },
+        {
+          "type": "drop_view_stmt",
+          "named": true
+        },
+        {
+          "type": "insert_stmt",
+          "named": true
+        },
+        {
+          "type": "pragma_stmt",
+          "named": true
+        },
+        {
+          "type": "reindex_stmt",
+          "named": true
+        },
+        {
+          "type": "release_stmt",
+          "named": true
+        },
+        {
+          "type": "rollback_stmt",
+          "named": true
+        },
+        {
+          "type": "savepoint_stmt",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "update_stmt",
+          "named": true
+        },
+        {
+          "type": "vacuum_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sql_stmt_list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "sql_stmt",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "string_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "table_constraint",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "CHECK",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CONSTRAINT",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FOREIGN",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "KEY",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "PRIMARY",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "UNIQUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "conflict_clause",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "foreign_key_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "indexed_column",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "table_or_subquery",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "BY",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "INDEXED",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "join_constraint",
+          "named": true
+        },
+        {
+          "type": "join_operator",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "table_or_subquery",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "signed_number",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "update_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ABORT",
+          "named": true
+        },
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FAIL",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IGNORE",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "REPLACE",
+          "named": true
+        },
+        {
+          "type": "ROLLBACK",
+          "named": true
+        },
+        {
+          "type": "SET",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "UPDATE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "from_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "limit_clause",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "order_by_clause",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "qualified_table_name",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "returning_clause",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        },
+        {
+          "type": "with_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "upsert_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CONFLICT",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "DO",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTHING",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "ON",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "SET",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "UPDATE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "indexed_column",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        },
+        {
+          "type": "where_clause",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "vacuum_stmt",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "INTO",
+          "named": true
+        },
+        {
+          "type": "VACUUM",
+          "named": true
+        },
+        {
+          "type": "filename",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "where_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "WHERE",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "window_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "WINDOW",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "window_defn",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "window_defn",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "AND",
+          "named": true
+        },
+        {
+          "type": "AS",
+          "named": true
+        },
+        {
+          "type": "BETWEEN",
+          "named": true
+        },
+        {
+          "type": "BY",
+          "named": true
+        },
+        {
+          "type": "CASE",
+          "named": true
+        },
+        {
+          "type": "CAST",
+          "named": true
+        },
+        {
+          "type": "COLLATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_DATE",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIME",
+          "named": true
+        },
+        {
+          "type": "CURRENT_TIMESTAMP",
+          "named": true
+        },
+        {
+          "type": "DISTINCT",
+          "named": true
+        },
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "END",
+          "named": true
+        },
+        {
+          "type": "ESCAPE",
+          "named": true
+        },
+        {
+          "type": "EXISTS",
+          "named": true
+        },
+        {
+          "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "GLOB",
+          "named": true
+        },
+        {
+          "type": "IN",
+          "named": true
+        },
+        {
+          "type": "IS",
+          "named": true
+        },
+        {
+          "type": "ISNULL",
+          "named": true
+        },
+        {
+          "type": "LIKE",
+          "named": true
+        },
+        {
+          "type": "MATCH",
+          "named": true
+        },
+        {
+          "type": "NOT",
+          "named": true
+        },
+        {
+          "type": "NOTNULL",
+          "named": true
+        },
+        {
+          "type": "NULL",
+          "named": true
+        },
+        {
+          "type": "OR",
+          "named": true
+        },
+        {
+          "type": "ORDER",
+          "named": true
+        },
+        {
+          "type": "PARTITION",
+          "named": true
+        },
+        {
+          "type": "REGEXP",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        },
+        {
+          "type": "TRUE",
+          "named": true
+        },
+        {
+          "type": "WHEN",
+          "named": true
+        },
+        {
+          "type": "bind_parameter",
+          "named": true
+        },
+        {
+          "type": "blob_literal",
+          "named": true
+        },
+        {
+          "type": "collation_name",
+          "named": true
+        },
+        {
+          "type": "filter_clause",
+          "named": true
+        },
+        {
+          "type": "frame_spec",
+          "named": true
+        },
+        {
+          "type": "function_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "numeric_literal",
+          "named": true
+        },
+        {
+          "type": "ordering_term",
+          "named": true
+        },
+        {
+          "type": "over_clause",
+          "named": true
+        },
+        {
+          "type": "raise_function",
+          "named": true
+        },
+        {
+          "type": "select_stmt",
+          "named": true
+        },
+        {
+          "type": "string_literal",
+          "named": true
+        },
+        {
+          "type": "type_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "with_clause",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "RECURSIVE",
+          "named": true
+        },
+        {
+          "type": "WITH",
+          "named": true
+        },
+        {
+          "type": "common_table_expression",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!=",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "$",
+    "named": false
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "--",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "/*",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "<>",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "==",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": ">>",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "ABORT",
+    "named": true
+  },
+  {
+    "type": "ACTION",
+    "named": true
+  },
+  {
+    "type": "ADD",
+    "named": true
+  },
+  {
+    "type": "AFTER",
+    "named": true
+  },
+  {
+    "type": "ALL",
+    "named": true
+  },
+  {
+    "type": "ALTER",
+    "named": true
+  },
+  {
+    "type": "ALWAYS",
+    "named": true
+  },
+  {
+    "type": "ANALYZE",
+    "named": true
+  },
+  {
+    "type": "AND",
+    "named": true
+  },
+  {
+    "type": "AS",
+    "named": true
+  },
+  {
+    "type": "ASC",
+    "named": true
+  },
+  {
+    "type": "ATTACH",
+    "named": true
+  },
+  {
+    "type": "AUTOINCREMENT",
+    "named": true
+  },
+  {
+    "type": "BEFORE",
+    "named": true
+  },
+  {
+    "type": "BEGIN",
+    "named": true
+  },
+  {
+    "type": "BETWEEN",
+    "named": true
+  },
+  {
+    "type": "BY",
+    "named": true
+  },
+  {
+    "type": "CASCADE",
+    "named": true
+  },
+  {
+    "type": "CASE",
+    "named": true
+  },
+  {
+    "type": "CAST",
+    "named": true
+  },
+  {
+    "type": "CHECK",
+    "named": true
+  },
+  {
+    "type": "COLLATE",
+    "named": true
+  },
+  {
+    "type": "COLUMN",
+    "named": true
+  },
+  {
+    "type": "COMMIT",
+    "named": true
+  },
+  {
+    "type": "CONFLICT",
+    "named": true
+  },
+  {
+    "type": "CONSTRAINT",
+    "named": true
+  },
+  {
+    "type": "CREATE",
+    "named": true
+  },
+  {
+    "type": "CROSS",
+    "named": true
+  },
+  {
+    "type": "CURRENT",
+    "named": true
+  },
+  {
+    "type": "CURRENT_DATE",
+    "named": true
+  },
+  {
+    "type": "CURRENT_TIME",
+    "named": true
+  },
+  {
+    "type": "CURRENT_TIMESTAMP",
+    "named": true
+  },
+  {
+    "type": "DATABASE",
+    "named": true
+  },
+  {
+    "type": "DEFAULT",
+    "named": true
+  },
+  {
+    "type": "DEFERRABLE",
+    "named": true
+  },
+  {
+    "type": "DEFERRED",
+    "named": true
+  },
+  {
+    "type": "DELETE",
+    "named": true
+  },
+  {
+    "type": "DESC",
+    "named": true
+  },
+  {
+    "type": "DETACH",
+    "named": true
+  },
+  {
+    "type": "DISTINCT",
+    "named": true
+  },
+  {
+    "type": "DO",
+    "named": true
+  },
+  {
+    "type": "DROP",
+    "named": true
+  },
+  {
+    "type": "EACH",
+    "named": true
+  },
+  {
+    "type": "ELSE",
+    "named": true
+  },
+  {
+    "type": "END",
+    "named": true
+  },
+  {
+    "type": "ESCAPE",
+    "named": true
+  },
+  {
+    "type": "EXCEPT",
+    "named": true
+  },
+  {
+    "type": "EXCLUDE",
+    "named": true
+  },
+  {
+    "type": "EXCLUSIVE",
+    "named": true
+  },
+  {
+    "type": "EXISTS",
+    "named": true
+  },
+  {
+    "type": "EXPLAIN",
+    "named": true
+  },
+  {
+    "type": "FAIL",
+    "named": true
+  },
+  {
+    "type": "FALSE",
+    "named": true
+  },
+  {
+    "type": "FILTER",
+    "named": true
+  },
+  {
+    "type": "FIRST",
+    "named": true
+  },
+  {
+    "type": "FOLLOWING",
+    "named": true
+  },
+  {
+    "type": "FOR",
+    "named": true
+  },
+  {
+    "type": "FOREIGN",
+    "named": true
+  },
+  {
+    "type": "FROM",
+    "named": true
+  },
+  {
+    "type": "GENERATED",
+    "named": true
+  },
+  {
+    "type": "GLOB",
+    "named": true
+  },
+  {
+    "type": "GROUP",
+    "named": true
+  },
+  {
+    "type": "GROUPS",
+    "named": true
+  },
+  {
+    "type": "HAVING",
+    "named": true
+  },
+  {
+    "type": "IF",
+    "named": true
+  },
+  {
+    "type": "IGNORE",
+    "named": true
+  },
+  {
+    "type": "IMMEDIATE",
+    "named": true
+  },
+  {
+    "type": "IN",
+    "named": true
+  },
+  {
+    "type": "INDEX",
+    "named": true
+  },
+  {
+    "type": "INDEXED",
+    "named": true
+  },
+  {
+    "type": "INITIALLY",
+    "named": true
+  },
+  {
+    "type": "INNER",
+    "named": true
+  },
+  {
+    "type": "INSERT",
+    "named": true
+  },
+  {
+    "type": "INSTEAD",
+    "named": true
+  },
+  {
+    "type": "INTERSECT",
+    "named": true
+  },
+  {
+    "type": "INTO",
+    "named": true
+  },
+  {
+    "type": "IS",
+    "named": true
+  },
+  {
+    "type": "ISNULL",
+    "named": true
+  },
+  {
+    "type": "JOIN",
+    "named": true
+  },
+  {
+    "type": "KEY",
+    "named": true
+  },
+  {
+    "type": "LAST",
+    "named": true
+  },
+  {
+    "type": "LEFT",
+    "named": true
+  },
+  {
+    "type": "LIKE",
+    "named": true
+  },
+  {
+    "type": "LIMIT",
+    "named": true
+  },
+  {
+    "type": "MATCH",
+    "named": true
+  },
+  {
+    "type": "MATERIALIZED",
+    "named": true
+  },
+  {
+    "type": "NATURAL",
+    "named": true
+  },
+  {
+    "type": "NO",
+    "named": true
+  },
+  {
+    "type": "NOT",
+    "named": true
+  },
+  {
+    "type": "NOTHING",
+    "named": true
+  },
+  {
+    "type": "NOTNULL",
+    "named": true
+  },
+  {
+    "type": "NULL",
+    "named": true
+  },
+  {
+    "type": "NULLS",
+    "named": true
+  },
+  {
+    "type": "OF",
+    "named": true
+  },
+  {
+    "type": "OFFSET",
+    "named": true
+  },
+  {
+    "type": "ON",
+    "named": true
+  },
+  {
+    "type": "OR",
+    "named": true
+  },
+  {
+    "type": "ORDER",
+    "named": true
+  },
+  {
+    "type": "OTHERS",
+    "named": true
+  },
+  {
+    "type": "OUTER",
+    "named": true
+  },
+  {
+    "type": "OVER",
+    "named": true
+  },
+  {
+    "type": "PARTITION",
+    "named": true
+  },
+  {
+    "type": "PLAN",
+    "named": true
+  },
+  {
+    "type": "PRAGMA",
+    "named": true
+  },
+  {
+    "type": "PRECEDING",
+    "named": true
+  },
+  {
+    "type": "PRIMARY",
+    "named": true
+  },
+  {
+    "type": "QUERY",
+    "named": true
+  },
+  {
+    "type": "RAISE",
+    "named": true
+  },
+  {
+    "type": "RANGE",
+    "named": true
+  },
+  {
+    "type": "RECURSIVE",
+    "named": true
+  },
+  {
+    "type": "REFERENCES",
+    "named": true
+  },
+  {
+    "type": "REGEXP",
+    "named": true
+  },
+  {
+    "type": "REINDEX",
+    "named": true
+  },
+  {
+    "type": "RELEASE",
+    "named": true
+  },
+  {
+    "type": "RENAME",
+    "named": true
+  },
+  {
+    "type": "REPLACE",
+    "named": true
+  },
+  {
+    "type": "RESTRICT",
+    "named": true
+  },
+  {
+    "type": "RETURNING",
+    "named": true
+  },
+  {
+    "type": "ROLLBACK",
+    "named": true
+  },
+  {
+    "type": "ROW",
+    "named": true
+  },
+  {
+    "type": "ROWID",
+    "named": true
+  },
+  {
+    "type": "ROWS",
+    "named": true
+  },
+  {
+    "type": "SAVEPOINT",
+    "named": true
+  },
+  {
+    "type": "SELECT",
+    "named": true
+  },
+  {
+    "type": "SET",
+    "named": true
+  },
+  {
+    "type": "STORED",
+    "named": true
+  },
+  {
+    "type": "TABLE",
+    "named": true
+  },
+  {
+    "type": "TEMP",
+    "named": true
+  },
+  {
+    "type": "TEMPORARY",
+    "named": true
+  },
+  {
+    "type": "THEN",
+    "named": true
+  },
+  {
+    "type": "TIES",
+    "named": true
+  },
+  {
+    "type": "TO",
+    "named": true
+  },
+  {
+    "type": "TRANSACTION",
+    "named": true
+  },
+  {
+    "type": "TRIGGER",
+    "named": true
+  },
+  {
+    "type": "TRUE",
+    "named": true
+  },
+  {
+    "type": "UNBOUNDED",
+    "named": true
+  },
+  {
+    "type": "UNION",
+    "named": true
+  },
+  {
+    "type": "UNIQUE",
+    "named": true
+  },
+  {
+    "type": "UPDATE",
+    "named": true
+  },
+  {
+    "type": "USING",
+    "named": true
+  },
+  {
+    "type": "VACUUM",
+    "named": true
+  },
+  {
+    "type": "VALUES",
+    "named": true
+  },
+  {
+    "type": "VIEW",
+    "named": true
+  },
+  {
+    "type": "VIRTUAL",
+    "named": true
+  },
+  {
+    "type": "WHEN",
+    "named": true
+  },
+  {
+    "type": "WHERE",
+    "named": true
+  },
+  {
+    "type": "WINDOW",
+    "named": true
+  },
+  {
+    "type": "WITH",
+    "named": true
+  },
+  {
+    "type": "WITHOUT",
+    "named": true
+  },
+  {
+    "type": "X",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "`",
+    "named": false
+  },
+  {
+    "type": "numeric_literal",
+    "named": true
+  },
+  {
+    "type": "x",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "||",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]

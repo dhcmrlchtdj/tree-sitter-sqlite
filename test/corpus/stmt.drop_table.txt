@@ -1,0 +1,14 @@
+==================
+stmt.drop_table
+==================
+
+DROP TABLE table;
+DROP TABLE schema.table;
+DROP TABLE IF EXISTS table;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (drop_table_stmt (DROP) (TABLE) (identifier)))
+ (sql_stmt (drop_table_stmt (DROP) (TABLE) (identifier) (identifier)))
+ (sql_stmt (drop_table_stmt (DROP) (TABLE) (IF) (EXISTS) (identifier))))

@@ -1,0 +1,16 @@
+==================
+stmt.rollback
+==================
+
+ROLLBACK;
+ROLLBACK TRANSACTION;
+ROLLBACK TO point;
+ROLLBACK TO SAVEPOINT point;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (rollback_stmt (ROLLBACK)))
+ (sql_stmt (rollback_stmt (ROLLBACK) (TRANSACTION)))
+ (sql_stmt (rollback_stmt (ROLLBACK) (TO) (identifier)))
+ (sql_stmt (rollback_stmt (ROLLBACK) (TO) (SAVEPOINT) (identifier))))

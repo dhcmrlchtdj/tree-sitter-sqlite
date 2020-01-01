@@ -1,0 +1,14 @@
+==================
+stmt.drop_trigger
+==================
+
+DROP TRIGGER trigger;
+DROP TRIGGER schema.trigger;
+DROP TRIGGER IF EXISTS trigger;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (drop_trigger_stmt (DROP) (TRIGGER) (identifier)))
+ (sql_stmt (drop_trigger_stmt (DROP) (TRIGGER) (identifier) (identifier)))
+ (sql_stmt (drop_trigger_stmt (DROP) (TRIGGER) (IF) (EXISTS) (identifier))))

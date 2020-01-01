@@ -1,0 +1,14 @@
+==================
+stmt.pragma
+==================
+
+PRAGMA schema.auto_vacuum;
+PRAGMA schema.auto_vacuum = 0;
+PRAGMA schema.auto_vacuum(NONE);
+
+---
+
+(sql_stmt_list
+ (sql_stmt (pragma_stmt (PRAGMA) (identifier) (identifier)))
+ (sql_stmt (pragma_stmt (PRAGMA) (identifier) (identifier) (pragma_value (signed_number (numeric_literal)))))
+ (sql_stmt (pragma_stmt (PRAGMA) (identifier) (identifier) (pragma_value (identifier)))))

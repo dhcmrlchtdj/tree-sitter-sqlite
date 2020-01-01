@@ -1,0 +1,10 @@
+==================
+stmt.savepoint
+==================
+
+SAVEPOINT point;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (savepoint_stmt (SAVEPOINT) (identifier))))

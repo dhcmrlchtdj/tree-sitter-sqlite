@@ -1,14 +1,35 @@
 {
-    "name": "tree-sitter-sql",
-    "version": "0.0.0",
-    "description": "SQL grammar for node-tree-sitter",
-    "main": "index.js",
+    "name": "tree-sitter-sqlite",
+    "version": "0.0.1",
+    "description": "SQLite grammar for the tree-sitter parsing library",
+    "main": "bindings/node",
     "author": "h11 <nirisix@gmail.com>",
     "license": "MIT",
+    "tree-sitter": [
+        {
+            "scope": "source.sql",
+            "file-types": [
+                "sql"
+            ]
+        }
+    ],
     "dependencies": {
-        "nan": "2.14.0"
+        "nan": "2.14.2"
     },
     "devDependencies": {
-        "tree-sitter-cli": "0.16.2"
+        "prettier": "2.3.0",
+        "tree-sitter-cli": "0.19.4"
+    },
+    "prettier": {
+        "printWidth": 80,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": false,
+        "singleQuote": false,
+        "quoteProps": "as-needed",
+        "trailingComma": "all",
+        "bracketSpacing": true,
+        "arrowParens": "always",
+        "endOfLine": "lf"
     }
 }
