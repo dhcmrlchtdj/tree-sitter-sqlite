@@ -1,0 +1,12 @@
+==================
+stmt.explain
+==================
+
+EXPLAIN COMMIT;
+EXPLAIN QUERY PLAN COMMIT;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (EXPLAIN) (commit_stmt (COMMIT)))
+ (sql_stmt (EXPLAIN) (QUERY) (PLAN) (commit_stmt (COMMIT))))
