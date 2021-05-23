@@ -276,35 +276,37 @@ exports.part = {
         ),
 
     foreign_key_clause: ($) =>
-        seq(
-            $.REFERENCES,
-            $._name,
-            optional(seq("(", commaSep($._name), ")")),
-            repeat(
-                choice(
-                    seq(
-                        $.ON,
-                        choice($.DELETE, $.UPDATE),
-                        choice(
-                            seq($.SET, $.NULL),
-                            seq($.SET, $.DEFAULT),
-                            $.CASCADE,
-                            $.RESTRICT,
-                            seq($.NO, $.ACTION),
+        prec.left( // XXX
+            1,
+            seq(
+                $.REFERENCES,
+                $._name,
+                optional(seq("(", commaSep($._name), ")")),
+                repeat(
+                    choice(
+                        seq(
+                            $.ON,
+                            choice($.DELETE, $.UPDATE),
+                            choice(
+                                seq($.SET, $.NULL),
+                                seq($.SET, $.DEFAULT),
+                                $.CASCADE,
+                                $.RESTRICT,
+                                seq($.NO, $.ACTION),
+                            ),
                         ),
+                        seq($.MATCH, $._name),
                     ),
-                    seq($.MATCH, $._name),
                 ),
-            ),
-            optional(
-                seq(
-                    // FIXME
-                    // optional($.NOT),
-                    $.DEFERRABLE,
-                    optional(
-                        choice(
-                            seq($.INITIALLY, $.DEFERRABLE),
-                            seq($.INITIALLY, $.DEFERRABLE),
+                optional(
+                    seq(
+                        optional($.NOT),
+                        $.DEFERRABLE,
+                        optional(
+                            choice(
+                                seq($.INITIALLY, $.DEFERRABLE),
+                                seq($.INITIALLY, $.DEFERRABLE),
+                            ),
                         ),
                     ),
                 ),

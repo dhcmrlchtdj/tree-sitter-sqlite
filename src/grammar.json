@@ -3659,170 +3659,90 @@
       ]
     },
     "foreign_key_clause": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "REFERENCES"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_name"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "("
-                },
-                {
-                  "type": "SEQ",
-                  "members": [
-                    {
-                      "type": "SYMBOL",
-                      "name": "_name"
-                    },
-                    {
-                      "type": "REPEAT",
-                      "content": {
-                        "type": "SEQ",
-                        "members": [
-                          {
-                            "type": "STRING",
-                            "value": ","
-                          },
-                          {
-                            "type": "SYMBOL",
-                            "name": "_name"
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
-                  "type": "STRING",
-                  "value": ")"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "REPEAT",
-          "content": {
+      "type": "PREC_LEFT",
+      "value": 1,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "SYMBOL",
+            "name": "REFERENCES"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_name"
+          },
+          {
             "type": "CHOICE",
             "members": [
               {
                 "type": "SEQ",
                 "members": [
                   {
-                    "type": "SYMBOL",
-                    "name": "ON"
+                    "type": "STRING",
+                    "value": "("
                   },
                   {
-                    "type": "CHOICE",
+                    "type": "SEQ",
                     "members": [
                       {
                         "type": "SYMBOL",
-                        "name": "DELETE"
+                        "name": "_name"
                       },
                       {
-                        "type": "SYMBOL",
-                        "name": "UPDATE"
+                        "type": "REPEAT",
+                        "content": {
+                          "type": "SEQ",
+                          "members": [
+                            {
+                              "type": "STRING",
+                              "value": ","
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "_name"
+                            }
+                          ]
+                        }
                       }
                     ]
                   },
                   {
-                    "type": "CHOICE",
-                    "members": [
-                      {
-                        "type": "SEQ",
-                        "members": [
-                          {
-                            "type": "SYMBOL",
-                            "name": "SET"
-                          },
-                          {
-                            "type": "SYMBOL",
-                            "name": "NULL"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "SEQ",
-                        "members": [
-                          {
-                            "type": "SYMBOL",
-                            "name": "SET"
-                          },
-                          {
-                            "type": "SYMBOL",
-                            "name": "DEFAULT"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "CASCADE"
-                      },
-                      {
-                        "type": "SYMBOL",
-                        "name": "RESTRICT"
-                      },
-                      {
-                        "type": "SEQ",
-                        "members": [
-                          {
-                            "type": "SYMBOL",
-                            "name": "NO"
-                          },
-                          {
-                            "type": "SYMBOL",
-                            "name": "ACTION"
-                          }
-                        ]
-                      }
-                    ]
+                    "type": "STRING",
+                    "value": ")"
                   }
                 ]
               },
               {
-                "type": "SEQ",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "MATCH"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "_name"
-                  }
-                ]
+                "type": "BLANK"
               }
             ]
-          }
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SEQ",
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "CHOICE",
               "members": [
                 {
-                  "type": "SYMBOL",
-                  "name": "DEFERRABLE"
-                },
-                {
-                  "type": "CHOICE",
+                  "type": "SEQ",
                   "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "ON"
+                    },
+                    {
+                      "type": "CHOICE",
+                      "members": [
+                        {
+                          "type": "SYMBOL",
+                          "name": "DELETE"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "UPDATE"
+                        }
+                      ]
+                    },
                     {
                       "type": "CHOICE",
                       "members": [
@@ -3831,11 +3751,11 @@
                           "members": [
                             {
                               "type": "SYMBOL",
-                              "name": "INITIALLY"
+                              "name": "SET"
                             },
                             {
                               "type": "SYMBOL",
-                              "name": "DEFERRABLE"
+                              "name": "NULL"
                             }
                           ]
                         },
@@ -3844,29 +3764,125 @@
                           "members": [
                             {
                               "type": "SYMBOL",
-                              "name": "INITIALLY"
+                              "name": "SET"
                             },
                             {
                               "type": "SYMBOL",
-                              "name": "DEFERRABLE"
+                              "name": "DEFAULT"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "CASCADE"
+                        },
+                        {
+                          "type": "SYMBOL",
+                          "name": "RESTRICT"
+                        },
+                        {
+                          "type": "SEQ",
+                          "members": [
+                            {
+                              "type": "SYMBOL",
+                              "name": "NO"
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "ACTION"
                             }
                           ]
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "SEQ",
+                  "members": [
+                    {
+                      "type": "SYMBOL",
+                      "name": "MATCH"
                     },
                     {
-                      "type": "BLANK"
+                      "type": "SYMBOL",
+                      "name": "_name"
                     }
                   ]
                 }
               ]
-            },
-            {
-              "type": "BLANK"
             }
-          ]
-        }
-      ]
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "NOT"
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "DEFERRABLE"
+                  },
+                  {
+                    "type": "CHOICE",
+                    "members": [
+                      {
+                        "type": "CHOICE",
+                        "members": [
+                          {
+                            "type": "SEQ",
+                            "members": [
+                              {
+                                "type": "SYMBOL",
+                                "name": "INITIALLY"
+                              },
+                              {
+                                "type": "SYMBOL",
+                                "name": "DEFERRABLE"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "SEQ",
+                            "members": [
+                              {
+                                "type": "SYMBOL",
+                                "name": "INITIALLY"
+                              },
+                              {
+                                "type": "SYMBOL",
+                                "name": "DEFERRABLE"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "type": "BLANK"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
     },
     "filter_clause": {
       "type": "SEQ",

@@ -1829,6 +1829,10 @@
           "named": true
         },
         {
+          "type": "NOT",
+          "named": true
+        },
+        {
           "type": "NULL",
           "named": true
         },
