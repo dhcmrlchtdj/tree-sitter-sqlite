@@ -10,6 +10,10 @@ error
 -- CREATE TABLE t1 AS SELECT count(*), max(b), min(a) FROM t2;
 -- CREATE TABLE t1(c1 text CONSTRAINT nm NULL);
 -- CREATE TABLE t1(c1 text CONSTRAINT \"1 2\" DEFAULT (1+1));
+-- CREATE TABLE t1(a
+--     REFERENCES t2(x) MATCH FULL
+--     ON DELETE SET NULL ON UPDATE RESTRICT DEFERRABLE
+-- );
 
 -- select
 --SELECT count(*), max(a) FROM t1 GROUP BY b;
@@ -18,6 +22,10 @@ error
 --------------------------------------------------------------------------------
 
 (sql_stmt_list
+  (comment)
+  (comment)
+  (comment)
+  (comment)
   (comment)
   (comment)
   (comment)
