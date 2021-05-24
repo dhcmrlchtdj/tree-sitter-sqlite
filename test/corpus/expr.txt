@@ -2,105 +2,297 @@
 expr
 ================================================================================
 
+-- signed-number
+SELECT 0, +0, -0;
+SELECT 1, +1, -1;
+SELECT 2, +2, -2;
+SELECT 1.4, +1.4, -1.4;
+SELECT 1.5e+5, +1.5e+5, -1.5e+5;
+SELECT 0.0001, +0.0001, -0.0001;
+
+-- literal-value
+SELECT 123;
+SELECT 123.4e05;
+SELECT 'abcde';
+SELECT X'414243';
+SELECT NULL;
+SELECT CURRENT_TIME;
+SELECT CURRENT_DATE;
+SELECT CURRENT_TIMESTAMP;
+
+-- parameter
+SELECT ?;
+SELECT ?123;
+SELECT @hello;
+SELECT :world;
+SELECT $tcl;
+--SELECT $tcl(array);
+
+-- function
+SELECT changes();
+SELECT count(*);
+SELECT count(DISTINCT "a");
+--SELECT substr('abc', 10, 20);
+
+-- raise-function
+SELECT RAISE(IGNORE);
+SELECT RAISE(ROLLBACK, 'error message');
+SELECT RAISE(ABORT, 'error message');
+SELECT RAISE(FAIL, 'error message');
+
+-- table
 SELECT cname;
 SELECT tblname.cname;
 SELECT dbname.tblname.cname;
 
+-- unary
 SELECT +1;
 SELECT -2;
 SELECT NOT 3;
 SELECT ~4;
 
---SELECT "EXPR1 || EXPR2"
--- SELECT "EXPR1 * EXPR2"
--- SELECT "EXPR1 / EXPR2"
--- SELECT "EXPR1 % EXPR2"
--- SELECT "EXPR1 + EXPR2"
--- SELECT "EXPR1 - EXPR2"
--- SELECT "EXPR1 << EXPR2"
--- SELECT "EXPR1 >> EXPR2"
--- SELECT "EXPR1 & EXPR2"
--- SELECT "EXPR1 | EXPR2"
--- SELECT "EXPR1 < EXPR2"
--- SELECT "EXPR1 <= EXPR2"
--- SELECT "EXPR1 > EXPR2"
--- SELECT "EXPR1 >= EXPR2"
--- SELECT "EXPR1 = EXPR2"
--- SELECT "EXPR1 == EXPR2"
--- SELECT "EXPR1 != EXPR2"
--- SELECT "EXPR1 <> EXPR2"
--- SELECT "EXPR1 IS EXPR2"
--- SELECT "EXPR1 IS NOT EXPR2"
--- SELECT "EXPR1 AND EXPR2"
--- SELECT "EXPR1 OR EXPR2"
+-- binary
+SELECT 'hello' || 'world';
+SELECT 1 * 2;
+SELECT 1 / 2;
+SELECT 1 % 2;
+SELECT 1 + 2;
+SELECT 1 - 2;
+SELECT 1 << 2;
+SELECT 1 >> 2;
+SELECT 1 & 2;
+SELECT 1 | 2;
+SELECT 1 < 2;
+SELECT 1 <= 2;
+SELECT 1 > 2;
+SELECT 1 >= 2;
+SELECT 1 = 2;
+SELECT 1 == 2;
+SELECT 1 != 2;
+SELECT 1 <> 2;
+SELECT 1 IS 2;
+SELECT 1 IS NOT 2;
+SELECT 1 AND 2;
+SELECT 1 OR 2;
 
---SELECT count(*);
---SELECT count(DISTINCT "a");
---SELECT substr('abc', 10, 20);
---SELECT changes();
+-- parenthesis
+SELECT ( 1 );
 
--- SELECT "( EXPR )"
+-- cast
+SELECT CAST ( '123' AS integer );
+SELECT CAST ( '123' AS 'abcd' );
+SELECT CAST ( '123' AS 'ab$ $cd' );
 
--- SELECT "CAST ( EXPR AS integer )"
--- SELECT "CAST ( EXPR AS 'abcd' )"
--- SELECT "CAST ( EXPR AS 'ab$ $cd' )"
+-- collate
+SELECT 'hello' COLLATE nocase;
+SELECT 'hello' COLLATE binary;
 
--- SELECT "EXPR COLLATE nocase"
--- SELECT "EXPR COLLATE binary"
+-- like
+SELECT 'abc' LIKE 'abcd';
+SELECT 'abc' LIKE 'abcd' ESCAPE '%';
+SELECT 'abc' GLOB 'abcd';
+SELECT 'abc' GLOB 'abcd' ESCAPE '%';
+SELECT 'abc' REGEXP 'abcd';
+SELECT 'abc' REGEXP 'abcd' ESCAPE '%';
+SELECT 'abc' MATCH 'abcd';
+SELECT 'abc' MATCH 'abcd' ESCAPE '%';
+SELECT 'abc' NOT LIKE 'abcd';
+SELECT 'abc' NOT LIKE 'abcd' ESCAPE '%';
+SELECT 'abc' NOT GLOB 'abcd';
+SELECT 'abc' NOT GLOB 'abcd' ESCAPE '%';
+SELECT 'abc' NOT REGEXP 'abcd';
+SELECT 'abc' NOT REGEXP 'abcd' ESCAPE '%';
+SELECT 'abc' NOT MATCH 'abcd';
+SELECT 'abc' NOT MATCH 'abcd' ESCAPE '%';
 
--- SELECT "EXPR1 LIKE EXPR2"
--- SELECT "EXPR1 LIKE EXPR2 ESCAPE EXPR"
--- SELECT "EXPR1 GLOB EXPR2"
--- SELECT "EXPR1 GLOB EXPR2 ESCAPE EXPR"
--- SELECT "EXPR1 REGEXP EXPR2"
--- SELECT "EXPR1 REGEXP EXPR2 ESCAPE EXPR"
--- SELECT "EXPR1 MATCH EXPR2"
--- SELECT "EXPR1 MATCH EXPR2 ESCAPE EXPR"
--- SELECT "EXPR1 NOT LIKE EXPR2"
--- SELECT "EXPR1 NOT LIKE EXPR2 ESCAPE EXPR"
--- SELECT "EXPR1 NOT GLOB EXPR2"
--- SELECT "EXPR1 NOT GLOB EXPR2 ESCAPE EXPR"
--- SELECT "EXPR1 NOT REGEXP EXPR2"
--- SELECT "EXPR1 NOT REGEXP EXPR2 ESCAPE EXPR"
--- SELECT "EXPR1 NOT MATCH EXPR2"
--- SELECT "EXPR1 NOT MATCH EXPR2 ESCAPE EXPR"
+-- null
+SELECT 1 ISNULL;
+SELECT 1 NOTNULL;
+SELECT 1 NOT NULL;
 
--- SELECT "EXPR ISNULL"
--- SELECT "EXPR NOTNULL"
--- SELECT "EXPR NOT NULL"
+-- is
+SELECT 1 IS 2;
+SELECT 1 IS NOT 2;
 
--- SELECT "EXPR1 IS EXPR2"
--- SELECT "EXPR1 IS NOT EXPR2"
+-- between
+SELECT 2 NOT BETWEEN 1 AND 3;
+SELECT 2 BETWEEN 1 AND 3;
 
--- SELECT "EXPR NOT BETWEEN EXPR1 AND EXPR2"
--- SELECT "EXPR BETWEEN EXPR1 AND EXPR2"
+-- in
+SELECT 1 IN (SELECT cname FROM tblname);
+SELECT 1 IN (1);
+SELECT 1 IN (1, 2, 3);
+SELECT 1 IN tblname;
+SELECT 1 IN dbname.tblname;
+SELECT 1 NOT IN (SELECT cname FROM tblname);
+SELECT 1 NOT IN (1);
+SELECT 1 NOT IN (1, 2, 3);
+SELECT 1 NOT IN tblname;
+SELECT 1 NOT IN dbname.tblname;
 
--- SELECT "EXPR NOT IN (SELECT cname FROM tblname)"
--- SELECT "EXPR NOT IN (1)"
--- SELECT "EXPR NOT IN (1, 2, 3)"
--- SELECT "EXPR NOT IN tblname"
--- SELECT "EXPR NOT IN dbname.tblname"
--- SELECT "EXPR IN (SELECT cname FROM tblname)"
--- SELECT "EXPR IN (1)"
--- SELECT "EXPR IN (1, 2, 3)"
--- SELECT "EXPR IN tblname"
--- SELECT "EXPR IN dbname.tblname"
+-- exists
+SELECT EXISTS (SELECT cname FROM tblname);
+SELECT NOT EXISTS (SELECT cname FROM tblname);
 
--- SELECT "EXISTS (SELECT cname FROM tblname)"
--- SELECT "NOT EXISTS (SELECT cname FROM tblname)"
-
--- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 ELSE EXPR END"
--- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 END"
--- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 ELSE EXPR2 END"
--- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 END"
--- SELECT "CASE WHEN EXPR1 THEN EXPR2 ELSE EXPR END"
--- SELECT "CASE WHEN EXPR1 THEN EXPR2 END"
--- SELECT "CASE WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 ELSE EXPR2 END"
--- SELECT "CASE WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 END"
+-- case
+SELECT CASE 'abc' WHEN 1 THEN 'true' ELSE 'false' END;
+SELECT CASE 'abc' WHEN 1 THEN 'true' END;
+SELECT CASE 'abc' WHEN 1 THEN 'true' WHEN 2 THEN 'false' ELSE 'fallback' END;
+SELECT CASE 'abc' WHEN 1 THEN 'true' WHEN 2 THEN 'false' END;
+SELECT CASE WHEN 0 THEN 'true' ELSE 'false' END;
+SELECT CASE WHEN 0 THEN 'true' END;
+SELECT CASE WHEN 0 THEN 'true' WHEN 1 THEN 'false' ELSE 'fallback' END;
+SELECT CASE WHEN 0 THEN 'true' WHEN 1 THEN 'false' END;
 
 --------------------------------------------------------------------------------
 
 (sql_stmt_list
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (blob_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (NULL)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CURRENT_TIME)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CURRENT_DATE)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CURRENT_TIMESTAMP)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter
+        (identifier))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter
+        (identifier))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter
+        (identifier))))
+  (comment)
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (function_name
+        (identifier))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (function_name
+        (identifier))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (function_name
+        (identifier))
+      (DISTINCT)
+      (identifier)))
+  (comment)
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (IGNORE))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (ROLLBACK)
+        (error_message
+          (string_literal)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (ABORT)
+        (error_message
+          (string_literal)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (FAIL)
+        (error_message
+          (string_literal)))))
+  (comment)
   (sql_stmt
     (select_stmt
       (SELECT)
@@ -116,6 +308,7 @@ SELECT ~4;
       (identifier)
       (identifier)
       (identifier)))
+  (comment)
   (sql_stmt
     (select_stmt
       (SELECT)
@@ -134,77 +327,542 @@ SELECT ~4;
       (SELECT)
       (numeric_literal)))
   (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IS)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IS)
+      (NOT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (AND)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (OR)
+      (numeric_literal)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CAST)
+      (string_literal)
+      (AS)
+      (type_name
+        (identifier))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CAST)
+      (string_literal)
+      (AS)
+      (type_name
+        (string_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CAST)
+      (string_literal)
+      (AS)
+      (type_name
+        (string_literal))))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (COLLATE)
+      (collation_name
+        (identifier))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (COLLATE)
+      (collation_name
+        (identifier))))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (LIKE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (LIKE)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (GLOB)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (GLOB)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (REGEXP)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (REGEXP)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (MATCH)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (MATCH)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (LIKE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (LIKE)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (GLOB)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (GLOB)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (REGEXP)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (REGEXP)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (MATCH)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (MATCH)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (ISNULL)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOTNULL)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (NULL)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IS)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IS)
+      (NOT)
+      (numeric_literal)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (BETWEEN)
+      (numeric_literal)
+      (AND)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (BETWEEN)
+      (numeric_literal)
+      (AND)
+      (numeric_literal)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (identifier)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (identifier)
+      (identifier)))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (EXISTS)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (NOT)
+      (EXISTS)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END))))
