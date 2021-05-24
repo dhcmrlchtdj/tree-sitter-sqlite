@@ -1,12 +1,19 @@
-==================
+================================================================================
 stmt.reindex
-==================
+================================================================================
 
 REINDEX index;
 REINDEX schema.index;
 
----
+--------------------------------------------------------------------------------
 
 (sql_stmt_list
- (sql_stmt (reindex_stmt (REINDEX) (identifier)))
- (sql_stmt (reindex_stmt (REINDEX) (identifier) (identifier))))
+  (sql_stmt
+    (reindex_stmt
+      (REINDEX)
+      (identifier)))
+  (sql_stmt
+    (reindex_stmt
+      (REINDEX)
+      (identifier)
+      (identifier))))

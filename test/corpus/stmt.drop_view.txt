@@ -1,14 +1,29 @@
-==================
+================================================================================
 stmt.drop_view
-==================
+================================================================================
 
 DROP VIEW view;
 DROP VIEW schema.view;
 DROP VIEW IF EXISTS view;
 
----
+--------------------------------------------------------------------------------
 
 (sql_stmt_list
- (sql_stmt (drop_view_stmt (DROP) (VIEW) (identifier)))
- (sql_stmt (drop_view_stmt (DROP) (VIEW) (identifier) (identifier)))
- (sql_stmt (drop_view_stmt (DROP) (VIEW) (IF) (EXISTS) (identifier))))
+  (sql_stmt
+    (drop_view_stmt
+      (DROP)
+      (VIEW)
+      (identifier)))
+  (sql_stmt
+    (drop_view_stmt
+      (DROP)
+      (VIEW)
+      (identifier)
+      (identifier)))
+  (sql_stmt
+    (drop_view_stmt
+      (DROP)
+      (VIEW)
+      (IF)
+      (EXISTS)
+      (identifier))))

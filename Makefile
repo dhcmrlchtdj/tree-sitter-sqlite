@@ -7,6 +7,9 @@ gen:
 test: gen
 	tree-sitter test
 
+update_test_snapshot:
+	tree-sitter test --update
+
 clean:
 	rm -rf ./bindings ./src ./binding.gyp
 

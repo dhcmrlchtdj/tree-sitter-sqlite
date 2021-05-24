@@ -1,16 +1,32 @@
-==================
+================================================================================
 stmt.vacuum
-==================
+================================================================================
 
 VACUUM;
 VACUUM schema;
 VACUUM INTO file;
 VACUUM schema INTO file;
 
----
+--------------------------------------------------------------------------------
 
 (sql_stmt_list
- (sql_stmt (vacuum_stmt (VACUUM)))
- (sql_stmt (vacuum_stmt (VACUUM) (identifier)))
- (sql_stmt (vacuum_stmt (VACUUM) (INTO) (filename (identifier))))
- (sql_stmt (vacuum_stmt (VACUUM) (identifier) (INTO) (filename (identifier)))))
+  (sql_stmt
+    (vacuum_stmt
+      (VACUUM)))
+  (sql_stmt
+    (vacuum_stmt
+      (VACUUM)
+      (identifier)))
+  (sql_stmt
+    (vacuum_stmt
+      (VACUUM)
+      (INTO)
+      (filename
+        (identifier))))
+  (sql_stmt
+    (vacuum_stmt
+      (VACUUM)
+      (identifier)
+      (INTO)
+      (filename
+        (identifier)))))

@@ -1,14 +1,23 @@
-==================
+================================================================================
 stmt.analyze
-==================
+================================================================================
 
 ANALYZE;
 ANALYZE table;
 ANALYZE schema.table;
 
----
+--------------------------------------------------------------------------------
 
 (sql_stmt_list
- (sql_stmt (analyze_stmt (ANALYZE)))
- (sql_stmt (analyze_stmt (ANALYZE) (identifier)))
- (sql_stmt (analyze_stmt (ANALYZE) (identifier) (identifier))))
+  (sql_stmt
+    (analyze_stmt
+      (ANALYZE)))
+  (sql_stmt
+    (analyze_stmt
+      (ANALYZE)
+      (identifier)))
+  (sql_stmt
+    (analyze_stmt
+      (ANALYZE)
+      (identifier)
+      (identifier))))

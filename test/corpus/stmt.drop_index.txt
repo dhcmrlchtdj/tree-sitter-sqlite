@@ -1,14 +1,29 @@
-==================
+================================================================================
 stmt.drop_index
-==================
+================================================================================
 
 DROP INDEX index;
 DROP INDEX schema.index;
 DROP INDEX IF EXISTS index;
 
----
+--------------------------------------------------------------------------------
 
 (sql_stmt_list
- (sql_stmt (drop_index_stmt (DROP) (INDEX) (identifier)))
- (sql_stmt (drop_index_stmt (DROP) (INDEX) (identifier) (identifier)))
- (sql_stmt (drop_index_stmt (DROP) (INDEX) (IF) (EXISTS) (identifier))))
+  (sql_stmt
+    (drop_index_stmt
+      (DROP)
+      (INDEX)
+      (identifier)))
+  (sql_stmt
+    (drop_index_stmt
+      (DROP)
+      (INDEX)
+      (identifier)
+      (identifier)))
+  (sql_stmt
+    (drop_index_stmt
+      (DROP)
+      (INDEX)
+      (IF)
+      (EXISTS)
+      (identifier))))

@@ -1,6 +1,6 @@
-==================
+================================================================================
 stmt.select.core
-==================
+================================================================================
 
 -- SELECT 1, 2, 3;
 -- SELECT DISTINCT 1, 2, 3;
@@ -54,6 +54,57 @@ stmt.select.core
 -- SELECT ALL count(*), max(a) FROM t1 WHERE a!='b' GROUP BY b HAVING count(*)=1;
 -- SELECT ALL count(*), max(a) FROM t1 WHERE 0 GROUP BY b HAVING count(*)=2;
 
----
+--------------------------------------------------------------------------------
 
-(sql_stmt_list)
+(sql_stmt_list
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment))

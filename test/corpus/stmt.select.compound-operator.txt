@@ -1,16 +1,77 @@
-==================
+================================================================================
 stmt.select.compound-operator
-==================
+================================================================================
 
 SELECT rowid FROM t1 UNION ALL SELECT rowid+2 FROM t4;
 SELECT rowid FROM t1 UNION     SELECT rowid+2 FROM t4;
 SELECT rowid FROM t1 INTERSECT SELECT rowid+2 FROM t4;
 SELECT rowid FROM t1 EXCEPT    SELECT rowid+2 FROM t4;
 
----
+--------------------------------------------------------------------------------
 
 (sql_stmt_list
- (sql_stmt (select_stmt (SELECT) (identifier) (from_clause (FROM) (table_or_subquery (identifier))) (UNION) (ALL) (SELECT) (identifier) (numeric_literal) (from_clause (FROM) (table_or_subquery (identifier)))))
- (sql_stmt (select_stmt (SELECT) (identifier) (from_clause (FROM) (table_or_subquery (identifier))) (UNION) (SELECT) (identifier) (numeric_literal) (from_clause (FROM) (table_or_subquery (identifier)))))
- (sql_stmt (select_stmt (SELECT) (identifier) (from_clause (FROM) (table_or_subquery (identifier))) (INTERSECT) (SELECT) (identifier) (numeric_literal) (from_clause (FROM) (table_or_subquery (identifier)))))
- (sql_stmt (select_stmt (SELECT) (identifier) (from_clause (FROM) (table_or_subquery (identifier))) (EXCEPT) (SELECT) (identifier) (numeric_literal) (from_clause (FROM) (table_or_subquery (identifier))))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (ALL)
+      (SELECT)
+      (identifier)
+      (numeric_literal)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (numeric_literal)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (INTERSECT)
+      (SELECT)
+      (identifier)
+      (numeric_literal)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (EXCEPT)
+      (SELECT)
+      (identifier)
+      (numeric_literal)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier))))))

@@ -1,6 +1,6 @@
-==================
+================================================================================
 stmt.create_table.column-constraint
-==================
+================================================================================
 
 -- CREATE TABLE t1(c1 text PRIMARY KEY);
 -- CREATE TABLE t1(c1 text PRIMARY KEY ASC);
@@ -27,6 +27,30 @@ stmt.create_table.column-constraint
 -- CREATE TABLE t1(c1 PRIMARY KEY NOT NULL UNIQUE CHECK(c1 IS 'ten') DEFAULT 123 REFERENCES t1);
 -- CREATE TABLE t1(c1 REFERENCES t1 DEFAULT 123 CHECK(c1 IS 'ten') UNIQUE NOT NULL PRIMARY KEY);
 
----
+--------------------------------------------------------------------------------
 
-(sql_stmt_list)
+(sql_stmt_list
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment))

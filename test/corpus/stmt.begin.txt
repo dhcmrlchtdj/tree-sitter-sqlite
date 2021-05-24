@@ -1,14 +1,23 @@
-==================
+================================================================================
 stmt.begin
-==================
+================================================================================
 
 BEGIN;
 BEGIN TRANSACTION;
 BEGIN IMMEDIATE TRANSACTION;
 
----
+--------------------------------------------------------------------------------
 
 (sql_stmt_list
- (sql_stmt (begin_stmt (BEGIN)))
- (sql_stmt (begin_stmt (BEGIN) (TRANSACTION)))
- (sql_stmt (begin_stmt (BEGIN) (IMMEDIATE) (TRANSACTION))))
+  (sql_stmt
+    (begin_stmt
+      (BEGIN)))
+  (sql_stmt
+    (begin_stmt
+      (BEGIN)
+      (TRANSACTION)))
+  (sql_stmt
+    (begin_stmt
+      (BEGIN)
+      (IMMEDIATE)
+      (TRANSACTION))))

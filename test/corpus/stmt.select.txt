@@ -1,6 +1,6 @@
-==================
+================================================================================
 stmt.select
-==================
+================================================================================
 
 -- SELECT * FROM t1;
 -- SELECT * FROM t1 ORDER BY b;
@@ -21,6 +21,24 @@ stmt.select
 -- SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY b LIMIT 10 OFFSET 5;
 -- SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY a,b LIMIT 10, 5;
 
----
+--------------------------------------------------------------------------------
 
-(sql_stmt_list)
+(sql_stmt_list
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment))
