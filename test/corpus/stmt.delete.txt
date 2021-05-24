@@ -1,0 +1,38 @@
+==================
+stmt.delete
+==================
+
+DELETE FROM t1;
+DELETE FROM t1 INDEXED BY i1;
+DELETE FROM t1 NOT INDEXED;
+DELETE FROM main.t1;
+DELETE FROM main.t1 INDEXED BY i1;
+DELETE FROM main.t1 NOT INDEXED;
+DELETE FROM t1 WHERE a>2;
+DELETE FROM t1 INDEXED BY i1 WHERE a>2;
+DELETE FROM t1 NOT INDEXED WHERE a>2;
+DELETE FROM main.t1 WHERE a>2;
+DELETE FROM main.t1 INDEXED BY i1 WHERE a>2;
+DELETE FROM main.t1 NOT INDEXED WHERE a>2;
+DELETE FROM t1 ORDER BY a ASC LIMIT 4 OFFSET 2;
+DELETE FROM t1 LIMIT 1 OFFSET 0;
+DELETE FROM t1 ORDER BY a DESC LIMIT 2;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (INDEXED) (BY) (identifier))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (NOT) (INDEXED))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (identifier))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (identifier) (INDEXED) (BY) (identifier))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (identifier) (NOT) (INDEXED))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier)) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (INDEXED) (BY) (identifier)) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (NOT) (INDEXED)) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (identifier)) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (identifier) (INDEXED) (BY) (identifier)) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier) (identifier) (NOT) (INDEXED)) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier)) (order_by_clause (ORDER) (BY) (ordering_term (identifier))) (limit_clause (LIMIT) (numeric_literal) (OFFSET) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier)) (limit_clause (LIMIT) (numeric_literal) (OFFSET) (numeric_literal))))
+ (sql_stmt (delete_stmt (DELETE) (FROM) (qualified_table_name (identifier)) (order_by_clause (ORDER) (BY) (ordering_term (identifier))) (limit_clause (LIMIT) (numeric_literal)))))

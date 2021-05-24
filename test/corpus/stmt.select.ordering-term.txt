@@ -1,0 +1,16 @@
+==================
+stmt.select.ordering-term
+==================
+
+SELECT b||a FROM t1 ORDER BY b||a;
+SELECT b||a FROM t1 ORDER BY (b||a) COLLATE nocase;
+SELECT b||a FROM t1 ORDER BY (b||a) ASC;
+SELECT b||a FROM t1 ORDER BY (b||a) DESC;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (identifier) (order_by_clause (ORDER) (BY) (ordering_term (identifier) (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (identifier) (order_by_clause (ORDER) (BY) (ordering_term (identifier) (identifier) (COLLATE) (collation_name (identifier))))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (identifier) (order_by_clause (ORDER) (BY) (ordering_term (identifier) (identifier) (ASC)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (identifier) (order_by_clause (ORDER) (BY) (ordering_term (identifier) (identifier) (DESC))))))

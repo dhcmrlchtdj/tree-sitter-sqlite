@@ -1,0 +1,41 @@
+==================
+stmt.select.join-op
+==================
+
+
+SELECT t1.rowid FROM t1;
+SELECT t1.rowid FROM t1,t2;
+SELECT t1.rowid FROM t1,t2,t3;
+SELECT t1.rowid FROM t1;
+SELECT t1.rowid FROM t1 JOIN t2;
+SELECT t1.rowid FROM t1 JOIN t2 JOIN t3;
+SELECT t1.rowid FROM t1 NATURAL JOIN t3;
+SELECT t1.rowid FROM t1 NATURAL LEFT OUTER JOIN t3;
+SELECT t1.rowid FROM t1 NATURAL LEFT JOIN t3;
+SELECT t1.rowid FROM t1 NATURAL INNER JOIN t3;
+SELECT t1.rowid FROM t1 NATURAL CROSS JOIN t3;
+SELECT t1.rowid FROM t1 JOIN t3;
+SELECT t1.rowid FROM t1 LEFT OUTER JOIN t3;
+SELECT t1.rowid FROM t1 LEFT JOIN t3;
+SELECT t1.rowid FROM t1 INNER JOIN t3;
+SELECT t1.rowid FROM t1 CROSS JOIN t3;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator) (table_or_subquery (identifier)) (join_operator) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (JOIN)) (table_or_subquery (identifier)) (join_operator (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (NATURAL) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (NATURAL) (LEFT) (OUTER) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (NATURAL) (LEFT) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (NATURAL) (INNER) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (NATURAL) (CROSS) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (LEFT) (OUTER) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (LEFT) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (INNER) (JOIN)) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (identifier) (from_clause (FROM) (table_or_subquery (identifier)) (join_operator (CROSS) (JOIN)) (table_or_subquery (identifier))))))

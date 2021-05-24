@@ -1,0 +1,18 @@
+==================
+stmt.select.result-column
+==================
+
+SELECT * FROM t1;
+SELECT t1.* FROM t1;
+SELECT 'x'||a||'x' FROM t1;
+SELECT 'x'||a||'x' alias FROM t1;
+SELECT 'x'||a||'x' AS alias FROM t1;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (select_stmt (SELECT) (from_clause (FROM) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (identifier) (from_clause (FROM) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (string_literal) (identifier) (string_literal) (from_clause (FROM) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (string_literal) (identifier) (string_literal) (identifier) (from_clause (FROM) (table_or_subquery (identifier)))))
+ (sql_stmt (select_stmt (SELECT) (string_literal) (identifier) (string_literal) (AS) (identifier) (from_clause (FROM) (table_or_subquery (identifier))))))

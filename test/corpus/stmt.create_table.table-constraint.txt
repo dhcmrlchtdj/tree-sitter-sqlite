@@ -1,0 +1,24 @@
+==================
+stmt.create_table.table-constraint
+==================
+
+CREATE TABLE t1(c1, c2, PRIMARY KEY(c1));
+CREATE TABLE t1(c1, c2, PRIMARY KEY(c1, c2));
+CREATE TABLE t1(c1, c2, PRIMARY KEY(c1, c2) ON CONFLICT IGNORE);
+CREATE TABLE t1(c1, c2, UNIQUE(c1));
+CREATE TABLE t1(c1, c2, UNIQUE(c1, c2));
+CREATE TABLE t1(c1, c2, UNIQUE(c1, c2) ON CONFLICT IGNORE);
+CREATE TABLE t1(c1, c2, CHECK(c1 IS NOT c2));
+CREATE TABLE t1(c1, c2, FOREIGN KEY(c1) REFERENCES t2);
+
+---
+
+(sql_stmt_list
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (PRIMARY) (KEY) (indexed_column (identifier)))))
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (PRIMARY) (KEY) (indexed_column (identifier)) (indexed_column (identifier)))))
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (PRIMARY) (KEY) (indexed_column (identifier)) (indexed_column (identifier)) (conflict_clause (ON) (CONFLICT) (IGNORE)))))
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (UNIQUE) (indexed_column (identifier)))))
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (UNIQUE) (indexed_column (identifier)) (indexed_column (identifier)))))
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (UNIQUE) (indexed_column (identifier)) (indexed_column (identifier)) (conflict_clause (ON) (CONFLICT) (IGNORE)))))
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (CHECK) (identifier) (IS) (NOT) (identifier))))
+ (sql_stmt (create_table_stmt (CREATE) (TABLE) (identifier) (column_def (identifier)) (column_def (identifier)) (table_constraint (FOREIGN) (KEY) (identifier) (foreign_key_clause (REFERENCES) (identifier))))))

@@ -1,0 +1,102 @@
+==================
+stmt.update
+==================
+
+UPDATE t1 SET a=10;
+UPDATE t1 SET a=10, b=5;
+UPDATE t1 SET a=10 WHERE b=5;
+UPDATE t1 SET b=5,a=10 WHERE 1;
+UPDATE main.t1 SET a=10;
+UPDATE main.t1 SET a=10, b=5;
+UPDATE main.t1 SET a=10 WHERE b=5;
+UPDATE OR ROLLBACK t1 SET a=10;
+UPDATE OR ROLLBACK t1 SET a=10, b=5;
+UPDATE OR ROLLBACK t1 SET a=10 WHERE b=5;
+UPDATE OR ROLLBACK t1 SET b=5,a=10 WHERE 1;
+UPDATE OR ROLLBACK main.t1 SET a=10;
+UPDATE OR ROLLBACK main.t1 SET a=10, b=5;
+UPDATE OR ROLLBACK main.t1 SET a=10 WHERE b=5;
+UPDATE OR ROLLBACK main.t1 SET b=5,a=10 WHERE 1;
+UPDATE OR ABORT t1 SET a=10;
+UPDATE OR ABORT t1 SET a=10, b=5;
+UPDATE OR ABORT t1 SET a=10 WHERE b=5;
+UPDATE OR ABORT t1 SET b=5,a=10 WHERE 1;
+UPDATE OR ABORT main.t1 SET a=10;
+UPDATE OR ABORT main.t1 SET a=10, b=5;
+UPDATE OR ABORT main.t1 SET a=10 WHERE b=5;
+UPDATE OR ABORT main.t1 SET b=5,a=10 WHERE 1;
+UPDATE OR REPLACE t1 SET a=10;
+UPDATE OR REPLACE t1 SET a=10, b=5;
+UPDATE OR REPLACE t1 SET a=10 WHERE b=5;
+UPDATE OR REPLACE t1 SET b=5,a=10 WHERE 1;
+UPDATE OR REPLACE main.t1 SET a=10;
+UPDATE OR REPLACE main.t1 SET a=10, b=5;
+UPDATE OR REPLACE main.t1 SET a=10 WHERE b=5;
+UPDATE OR REPLACE main.t1 SET b=5,a=10 WHERE 1;
+UPDATE OR FAIL t1 SET a=10;
+UPDATE OR FAIL t1 SET a=10, b=5;
+UPDATE OR FAIL t1 SET a=10 WHERE b=5;
+UPDATE OR FAIL t1 SET b=5,a=10 WHERE 1;
+UPDATE OR FAIL main.t1 SET a=10;
+UPDATE OR FAIL main.t1 SET a=10, b=5;
+UPDATE OR FAIL main.t1 SET a=10 WHERE b=5;
+UPDATE OR FAIL main.t1 SET b=5,a=10 WHERE 1;
+UPDATE OR IGNORE t1 SET a=10;
+UPDATE OR IGNORE t1 SET a=10, b=5;
+UPDATE OR IGNORE t1 SET a=10 WHERE b=5;
+UPDATE OR IGNORE t1 SET b=5,a=10 WHERE 1;
+UPDATE OR IGNORE main.t1 SET a=10;
+UPDATE OR IGNORE main.t1 SET a=10, b=5;
+UPDATE OR IGNORE main.t1 SET a=10 WHERE b=5;
+UPDATE OR IGNORE main.t1 SET b=5,a=10 WHERE 1;
+
+---
+
+(sql_stmt_list
+ (sql_stmt (update_stmt (UPDATE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ROLLBACK) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (ABORT) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (REPLACE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (FAIL) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal)))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (where_clause (WHERE) (identifier) (numeric_literal))))
+ (sql_stmt (update_stmt (UPDATE) (OR) (IGNORE) (qualified_table_name (identifier) (identifier)) (SET) (identifier) (numeric_literal) (identifier) (numeric_literal) (where_clause (WHERE) (numeric_literal)))))
