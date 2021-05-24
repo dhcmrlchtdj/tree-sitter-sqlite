@@ -1,0 +1,210 @@
+================================================================================
+expr
+================================================================================
+
+SELECT cname;
+SELECT tblname.cname;
+SELECT dbname.tblname.cname;
+
+SELECT +1;
+SELECT -2;
+SELECT NOT 3;
+SELECT ~4;
+
+--SELECT "EXPR1 || EXPR2"
+-- SELECT "EXPR1 * EXPR2"
+-- SELECT "EXPR1 / EXPR2"
+-- SELECT "EXPR1 % EXPR2"
+-- SELECT "EXPR1 + EXPR2"
+-- SELECT "EXPR1 - EXPR2"
+-- SELECT "EXPR1 << EXPR2"
+-- SELECT "EXPR1 >> EXPR2"
+-- SELECT "EXPR1 & EXPR2"
+-- SELECT "EXPR1 | EXPR2"
+-- SELECT "EXPR1 < EXPR2"
+-- SELECT "EXPR1 <= EXPR2"
+-- SELECT "EXPR1 > EXPR2"
+-- SELECT "EXPR1 >= EXPR2"
+-- SELECT "EXPR1 = EXPR2"
+-- SELECT "EXPR1 == EXPR2"
+-- SELECT "EXPR1 != EXPR2"
+-- SELECT "EXPR1 <> EXPR2"
+-- SELECT "EXPR1 IS EXPR2"
+-- SELECT "EXPR1 IS NOT EXPR2"
+-- SELECT "EXPR1 AND EXPR2"
+-- SELECT "EXPR1 OR EXPR2"
+
+--SELECT count(*);
+--SELECT count(DISTINCT "a");
+--SELECT substr('abc', 10, 20);
+--SELECT changes();
+
+-- SELECT "( EXPR )"
+
+-- SELECT "CAST ( EXPR AS integer )"
+-- SELECT "CAST ( EXPR AS 'abcd' )"
+-- SELECT "CAST ( EXPR AS 'ab$ $cd' )"
+
+-- SELECT "EXPR COLLATE nocase"
+-- SELECT "EXPR COLLATE binary"
+
+-- SELECT "EXPR1 LIKE EXPR2"
+-- SELECT "EXPR1 LIKE EXPR2 ESCAPE EXPR"
+-- SELECT "EXPR1 GLOB EXPR2"
+-- SELECT "EXPR1 GLOB EXPR2 ESCAPE EXPR"
+-- SELECT "EXPR1 REGEXP EXPR2"
+-- SELECT "EXPR1 REGEXP EXPR2 ESCAPE EXPR"
+-- SELECT "EXPR1 MATCH EXPR2"
+-- SELECT "EXPR1 MATCH EXPR2 ESCAPE EXPR"
+-- SELECT "EXPR1 NOT LIKE EXPR2"
+-- SELECT "EXPR1 NOT LIKE EXPR2 ESCAPE EXPR"
+-- SELECT "EXPR1 NOT GLOB EXPR2"
+-- SELECT "EXPR1 NOT GLOB EXPR2 ESCAPE EXPR"
+-- SELECT "EXPR1 NOT REGEXP EXPR2"
+-- SELECT "EXPR1 NOT REGEXP EXPR2 ESCAPE EXPR"
+-- SELECT "EXPR1 NOT MATCH EXPR2"
+-- SELECT "EXPR1 NOT MATCH EXPR2 ESCAPE EXPR"
+
+-- SELECT "EXPR ISNULL"
+-- SELECT "EXPR NOTNULL"
+-- SELECT "EXPR NOT NULL"
+
+-- SELECT "EXPR1 IS EXPR2"
+-- SELECT "EXPR1 IS NOT EXPR2"
+
+-- SELECT "EXPR NOT BETWEEN EXPR1 AND EXPR2"
+-- SELECT "EXPR BETWEEN EXPR1 AND EXPR2"
+
+-- SELECT "EXPR NOT IN (SELECT cname FROM tblname)"
+-- SELECT "EXPR NOT IN (1)"
+-- SELECT "EXPR NOT IN (1, 2, 3)"
+-- SELECT "EXPR NOT IN tblname"
+-- SELECT "EXPR NOT IN dbname.tblname"
+-- SELECT "EXPR IN (SELECT cname FROM tblname)"
+-- SELECT "EXPR IN (1)"
+-- SELECT "EXPR IN (1, 2, 3)"
+-- SELECT "EXPR IN tblname"
+-- SELECT "EXPR IN dbname.tblname"
+
+-- SELECT "EXISTS (SELECT cname FROM tblname)"
+-- SELECT "NOT EXISTS (SELECT cname FROM tblname)"
+
+-- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 ELSE EXPR END"
+-- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 END"
+-- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 ELSE EXPR2 END"
+-- SELECT "CASE EXPR WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 END"
+-- SELECT "CASE WHEN EXPR1 THEN EXPR2 ELSE EXPR END"
+-- SELECT "CASE WHEN EXPR1 THEN EXPR2 END"
+-- SELECT "CASE WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 ELSE EXPR2 END"
+-- SELECT "CASE WHEN EXPR1 THEN EXPR2 WHEN EXPR THEN EXPR1 END"
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (identifier)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (NOT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment)
+  (comment))
