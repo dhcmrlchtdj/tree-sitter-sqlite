@@ -898,7 +898,7 @@
         }
       ]
     },
-    "identifier": {
+    "_identifier": {
       "type": "CHOICE",
       "members": [
         {
@@ -967,6 +967,10 @@
         }
       ]
     },
+    "identifier": {
+      "type": "SYMBOL",
+      "name": "_identifier"
+    },
     "bind_parameter": {
       "type": "CHOICE",
       "members": [
@@ -1005,7 +1009,7 @@
             },
             {
               "type": "SYMBOL",
-              "name": "identifier"
+              "name": "_identifier"
             }
           ]
         }

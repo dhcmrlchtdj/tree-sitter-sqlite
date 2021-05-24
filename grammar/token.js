@@ -36,7 +36,7 @@ exports.token = {
 
     blob_literal: ($) => seq(choice("x", "X"), $._string),
 
-    identifier: ($) =>
+    _identifier: ($) =>
         choice(
             seq(/[a-zA-Z_]/, /[0-9a-zA-Z_]*/), // FIXME
             seq('"', /(""|[^"])*/, '"'),
@@ -44,8 +44,10 @@ exports.token = {
             seq("[", /[^\]]*/, "]"),
         ),
 
+    identifier: ($) => $._identifier,
+
     bind_parameter: ($) =>
-        choice(seq("?", /[0-9]*/), seq(choice(":", "@", "$"), $.identifier)),
+        choice(seq("?", /[0-9]*/), seq(choice(":", "@", "$"), $._identifier)),
 
     // https://github.com/tree-sitter/tree-sitter-javascript/blob/v0.19.0/grammar.js#L888
     comment: ($) =>

@@ -229,18 +229,15 @@ SELECT CASE WHEN 0 THEN 'true' WHEN 1 THEN 'false' END;
   (sql_stmt
     (select_stmt
       (SELECT)
-      (bind_parameter
-        (identifier))))
+      (bind_parameter)))
   (sql_stmt
     (select_stmt
       (SELECT)
-      (bind_parameter
-        (identifier))))
+      (bind_parameter)))
   (sql_stmt
     (select_stmt
       (SELECT)
-      (bind_parameter
-        (identifier))))
+      (bind_parameter)))
   (comment)
   (comment)
   (sql_stmt
