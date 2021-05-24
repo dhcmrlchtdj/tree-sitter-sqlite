@@ -2,7 +2,6 @@
 stmt.select.join-op
 ================================================================================
 
-
 SELECT t1.rowid FROM t1;
 SELECT t1.rowid FROM t1,t2;
 SELECT t1.rowid FROM t1,t2,t3;

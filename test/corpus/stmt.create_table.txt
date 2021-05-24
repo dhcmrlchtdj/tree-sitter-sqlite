@@ -2,39 +2,247 @@
 stmt.create_table
 ================================================================================
 
--- CREATE TABLE t1(a, b, c);
--- CREATE TEMP TABLE t1(a, b, c);
--- CREATE TEMPORARY TABLE t1(a, b, c);
--- CREATE TABLE IF NOT EXISTS t1(a, b, c);
--- CREATE TEMP TABLE IF NOT EXISTS t1(a, b, c);
--- CREATE TEMPORARY TABLE IF NOT EXISTS t1(a, b, c);
--- CREATE TABLE main.t1(a, b, c);
--- CREATE TEMP TABLE temp.t1(a, b, c);
--- CREATE TEMPORARY TABLE temp.t1(a, b, c);
--- CREATE TABLE IF NOT EXISTS main.t1(a, b, c);
--- CREATE TEMP TABLE IF NOT EXISTS temp.t1(a, b, c);
--- CREATE TEMPORARY TABLE IF NOT EXISTS temp.t1(a, b, c);
--- CREATE TABLE t1 AS SELECT * FROM t2;
--- CREATE TEMP TABLE t1 AS SELECT c, b, a FROM t2;
+CREATE TABLE t1(a, b, c);
+CREATE TEMP TABLE t1(a, b, c);
+CREATE TEMPORARY TABLE t1(a, b, c);
+CREATE TABLE IF NOT EXISTS t1(a, b, c);
+CREATE TEMP TABLE IF NOT EXISTS t1(a, b, c);
+CREATE TEMPORARY TABLE IF NOT EXISTS t1(a, b, c);
+CREATE TABLE main.t1(a, b, c);
+CREATE TEMP TABLE temp.t1(a, b, c);
+CREATE TEMPORARY TABLE temp.t1(a, b, c);
+CREATE TABLE IF NOT EXISTS main.t1(a, b, c);
+CREATE TEMP TABLE IF NOT EXISTS temp.t1(a, b, c);
+CREATE TEMPORARY TABLE IF NOT EXISTS temp.t1(a, b, c);
+CREATE TABLE t1 AS SELECT * FROM t2;
+CREATE TEMP TABLE t1 AS SELECT c, b, a FROM t2;
 -- CREATE TABLE t1 AS SELECT count(*), max(b), min(a) FROM t2;
--- CREATE TABLE t1(col1, col2 TEXT, col3 INTEGER UNIQUE, col4 VARCHAR(10, 10) PRIMARY KEY, "name with spaces" REFERENCES t1);
+CREATE TABLE t1(col1, col2 TEXT, col3 INTEGER UNIQUE, col4 VARCHAR(10, 10) PRIMARY KEY, "name with spaces" REFERENCES t1);
 
 --------------------------------------------------------------------------------
 
 (sql_stmt_list
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMP)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMPORARY)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (IF)
+      (NOT)
+      (EXISTS)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMP)
+      (TABLE)
+      (IF)
+      (NOT)
+      (EXISTS)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMPORARY)
+      (TABLE)
+      (IF)
+      (NOT)
+      (EXISTS)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMP)
+      (TABLE)
+      (identifier)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMPORARY)
+      (TABLE)
+      (identifier)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (IF)
+      (NOT)
+      (EXISTS)
+      (identifier)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMP)
+      (TABLE)
+      (IF)
+      (NOT)
+      (EXISTS)
+      (identifier)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMPORARY)
+      (TABLE)
+      (IF)
+      (NOT)
+      (EXISTS)
+      (identifier)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))
+      (column_def
+        (identifier))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (AS)
+      (select_stmt
+        (SELECT)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TEMP)
+      (TABLE)
+      (identifier)
+      (AS)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (identifier)
+        (identifier)
+        (identifier))))
   (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier))
+        (column_constraint
+          (UNIQUE)))
+        (column_def
+          (identifier)
+          (type_name
+            (identifier)
+            (signed_number
+              (numeric_literal))
+            (signed_number
+              (numeric_literal)))
+          (column_constraint
+            (PRIMARY)
+            (KEY)))
+        (column_def
+          (identifier)
+          (column_constraint
+            (foreign_key_clause
+              (REFERENCES)
+              (identifier)))))))
