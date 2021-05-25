@@ -15,7 +15,10 @@ SELECT b||a FROM t1 ORDER BY (b||a) DESC;
       (SELECT)
       (identifier)
       (identifier)
-      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
       (order_by_clause
         (ORDER)
         (BY)
@@ -27,7 +30,10 @@ SELECT b||a FROM t1 ORDER BY (b||a) DESC;
       (SELECT)
       (identifier)
       (identifier)
-      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
       (order_by_clause
         (ORDER)
         (BY)
@@ -42,7 +48,10 @@ SELECT b||a FROM t1 ORDER BY (b||a) DESC;
       (SELECT)
       (identifier)
       (identifier)
-      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
       (order_by_clause
         (ORDER)
         (BY)
@@ -55,7 +64,10 @@ SELECT b||a FROM t1 ORDER BY (b||a) DESC;
       (SELECT)
       (identifier)
       (identifier)
-      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
       (order_by_clause
         (ORDER)
         (BY)

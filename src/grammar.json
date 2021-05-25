@@ -902,17 +902,8 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[a-zA-Z_]"
-            },
-            {
-              "type": "PATTERN",
-              "value": "[0-9a-zA-Z_$]*"
-            }
-          ]
+          "type": "PATTERN",
+          "value": "[a-zA-Z_][0-9a-zA-Z_$]*"
         },
         {
           "type": "SEQ",

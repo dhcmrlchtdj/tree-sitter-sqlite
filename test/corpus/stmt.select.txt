@@ -2,43 +2,329 @@
 stmt.select
 ================================================================================
 
--- SELECT * FROM t1;
--- SELECT * FROM t1 ORDER BY b;
--- SELECT * FROM t1 ORDER BY b, a;
--- SELECT * FROM t1 LIMIT 10;
--- SELECT * FROM t1 LIMIT 10 OFFSET 5;
--- SELECT * FROM t1 LIMIT 10, 5;
--- SELECT * FROM t1 ORDER BY a LIMIT 10;
--- SELECT * FROM t1 ORDER BY b LIMIT 10 OFFSET 5;
--- SELECT * FROM t1 ORDER BY a,b LIMIT 10, 5;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY b;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY b, a;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 LIMIT 10;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 LIMIT 10 OFFSET 5;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 LIMIT 10, 5;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY a LIMIT 10;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY b LIMIT 10 OFFSET 5;
--- SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY a,b LIMIT 10, 5;
+SELECT * FROM t1;
+SELECT * FROM t1 ORDER BY b;
+SELECT * FROM t1 ORDER BY b, a;
+SELECT * FROM t1 LIMIT 10;
+SELECT * FROM t1 LIMIT 10 OFFSET 5;
+SELECT * FROM t1 LIMIT 10, 5;
+SELECT * FROM t1 ORDER BY a LIMIT 10;
+SELECT * FROM t1 ORDER BY b LIMIT 10 OFFSET 5;
+SELECT * FROM t1 ORDER BY a,b LIMIT 10, 5;
+SELECT * FROM t1 UNION SELECT b, a FROM t1;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY b;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY b, a;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 LIMIT 10;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 LIMIT 10 OFFSET 5;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 LIMIT 10, 5;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY a LIMIT 10;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY b LIMIT 10 OFFSET 5;
+SELECT * FROM t1 UNION SELECT b, a FROM t1 ORDER BY a,b LIMIT 10, 5;
 
 --------------------------------------------------------------------------------
 
 (sql_stmt_list
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment)
-  (comment))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier))
+        (ordering_term
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (OFFSET)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (OFFSET)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier))
+        (ordering_term
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier))
+        (ordering_term
+          (identifier)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (OFFSET)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (OFFSET)
+        (numeric_literal))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (UNION)
+      (SELECT)
+      (identifier)
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (order_by_clause
+        (ORDER)
+        (BY)
+        (ordering_term
+          (identifier))
+        (ordering_term
+          (identifier)))
+      (limit_clause
+        (LIMIT)
+        (numeric_literal)
+        (numeric_literal)))))

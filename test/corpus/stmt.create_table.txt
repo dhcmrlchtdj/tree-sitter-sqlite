@@ -210,7 +210,10 @@ CREATE TABLE t1(col1, col2 TEXT, col3 INTEGER UNIQUE, col4 VARCHAR(10, 10) PRIMA
         (identifier)
         (identifier)
         (identifier)
-        (identifier))))
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
   (sql_stmt
     (create_table_stmt
       (CREATE)
@@ -248,20 +251,20 @@ CREATE TABLE t1(col1, col2 TEXT, col3 INTEGER UNIQUE, col4 VARCHAR(10, 10) PRIMA
           (identifier))
         (column_constraint
           (UNIQUE)))
-        (column_def
+      (column_def
+        (identifier)
+        (type_name
           (identifier)
-          (type_name
-            (identifier)
-            (signed_number
-              (numeric_literal))
-            (signed_number
-              (numeric_literal)))
-          (column_constraint
-            (PRIMARY)
-            (KEY)))
-        (column_def
-          (identifier)
-          (column_constraint
-            (foreign_key_clause
-              (REFERENCES)
-              (identifier)))))))
+          (signed_number
+            (numeric_literal))
+          (signed_number
+            (numeric_literal)))
+        (column_constraint
+          (PRIMARY)
+          (KEY)))
+      (column_def
+        (identifier)
+        (column_constraint
+          (foreign_key_clause
+            (REFERENCES)
+            (identifier)))))))

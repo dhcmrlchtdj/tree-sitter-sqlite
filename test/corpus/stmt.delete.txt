@@ -153,7 +153,8 @@ DELETE FROM t1 ORDER BY a DESC LIMIT 2;
         (ORDER)
         (BY)
         (ordering_term
-          (identifier)))
+          (identifier)
+          (ASC)))
       (limit_clause
         (LIMIT)
         (numeric_literal)
@@ -180,7 +181,8 @@ DELETE FROM t1 ORDER BY a DESC LIMIT 2;
         (ORDER)
         (BY)
         (ordering_term
-          (identifier)))
+          (identifier)
+          (DESC)))
       (limit_clause
         (LIMIT)
         (numeric_literal)))))
