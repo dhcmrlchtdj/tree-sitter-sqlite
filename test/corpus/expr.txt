@@ -32,7 +32,7 @@ SELECT $tcl;
 SELECT changes();
 SELECT count(*);
 SELECT count(DISTINCT "a");
---SELECT substr('abc', 10, 20);
+SELECT substr('abc', 10, 20);
 
 -- raise-function
 SELECT RAISE(IGNORE);
@@ -257,7 +257,14 @@ SELECT CASE WHEN 0 THEN 'true' WHEN 1 THEN 'false' END;
         (identifier))
       (DISTINCT)
       (identifier)))
-  (comment)
+  (sql_stmt
+   (select_stmt
+    (SELECT)
+    (function_name
+     (identifier))
+    (string_literal)
+    (numeric_literal)
+    (numeric_literal)))
   (comment)
   (sql_stmt
     (select_stmt

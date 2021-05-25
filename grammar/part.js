@@ -75,7 +75,7 @@ exports.part = {
             seq(
                 $.function_name,
                 "(",
-                optional(choice(seq($.DISTINCT, commaSep($._expr)), "*")),
+                optional(choice(seq(optional($.DISTINCT), commaSep($._expr)), "*")),
                 ")",
                 optional($.filter_clause),
                 optional($.over_clause),
