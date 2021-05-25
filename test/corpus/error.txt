@@ -3,22 +3,18 @@ error
 ================================================================================
 
 -- create table
--- CREATE TABLE t1(c1 text CONSTRAINT nm NULL);
--- CREATE TABLE t1(c1 text CONSTRAINT \"1 2\" DEFAULT (1+1));
 -- CREATE TABLE t1(a
 --     REFERENCES t2(x) MATCH FULL
 --     ON DELETE SET NULL ON UPDATE RESTRICT DEFERRABLE
 -- );
 
 -- select
---SELECT count(*), max(a) FROM t1 GROUP BY b;
---SELECT count(*) FROM t1, t2 ON (t1.a=t2.a) USING (a);
+-- SELECT count(*), max(a) FROM t1 GROUP BY b HAVING count(*)=1;
+-- SELECT count(*) FROM t1, t2 ON (t1.a=t2.a) USING (a);
 
 --------------------------------------------------------------------------------
 
 (sql_stmt_list
-  (comment)
-  (comment)
   (comment)
   (comment)
   (comment)

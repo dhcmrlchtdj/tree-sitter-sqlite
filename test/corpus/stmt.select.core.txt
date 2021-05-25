@@ -26,7 +26,7 @@ SELECT DISTINCT 1, 2, 3 GROUP BY 2 HAVING count(*)>1;
 SELECT ALL 1, 2, 3 GROUP BY 2;
 SELECT ALL 1, 2, 3 GROUP BY 2 HAVING count(*)=1;
 SELECT ALL 1, 2, 3 GROUP BY 2 HAVING count(*)>1;
--- SELECT count(*), max(a) FROM t1 GROUP BY b;
+SELECT count(*), max(a) FROM t1 GROUP BY b;
 -- SELECT count(*), max(a) FROM t1 GROUP BY b HAVING count(*)=1;
 -- SELECT count(*), max(a) FROM t1 GROUP BY b HAVING count(*)=2;
 -- SELECT DISTINCT count(*), max(a) FROM t1 GROUP BY b;
@@ -320,7 +320,22 @@ SELECT ALL 1, 2, 3 WHERE 'abc' GROUP BY 2 HAVING count(*)>1;
         (function_name
           (identifier))
         (numeric_literal))))
-  (comment)
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (function_name
+        (identifier))
+      (function_name
+        (identifier))
+      (identifier)
+      (from_clause
+        (FROM)
+        (table_or_subquery
+          (identifier)))
+      (group_by_clause
+        (GROUP)
+        (BY)
+        (identifier))))
   (comment)
   (comment)
   (comment)

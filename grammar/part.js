@@ -154,7 +154,7 @@ exports.part = {
                     optional($.conflict_clause),
                     optional($.AUTOINCREMENT),
                 ),
-                seq($.NOT, $.NULL, optional($.conflict_clause)),
+                seq(optional($.NOT), $.NULL, optional($.conflict_clause)),
                 seq($.UNIQUE, optional($.conflict_clause)),
                 seq($.CHECK, "(", $._expr, ")"),
                 seq(

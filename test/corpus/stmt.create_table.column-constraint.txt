@@ -9,9 +9,9 @@ CREATE TABLE t1(c1 text CONSTRAINT cons PRIMARY KEY DESC);
 CREATE TABLE t1(c1 text NOT NULL);
 CREATE TABLE t1(c1 text CONSTRAINT nm NOT NULL);
 CREATE TABLE t1(c1 text NULL);
--- CREATE TABLE t1(c1 text CONSTRAINT nm NULL);
+CREATE TABLE t1(c1 text CONSTRAINT nm NULL);
 CREATE TABLE t1(c1 text UNIQUE);
--- CREATE TABLE t1(c1 text CONSTRAINT un UNIQUE);
+CREATE TABLE t1(c1 text CONSTRAINT un UNIQUE);
 CREATE TABLE t1(c1 text CHECK(c1!=0));
 CREATE TABLE t1(c1 text CONSTRAINT chk CHECK(c1!=0));
 CREATE TABLE t1(c1 text DEFAULT 1);
@@ -19,7 +19,7 @@ CREATE TABLE t1(c1 text DEFAULT -1);
 CREATE TABLE t1(c1 text DEFAULT +1);
 CREATE TABLE t1(c1 text DEFAULT -45.8e22);
 CREATE TABLE t1(c1 text DEFAULT (1+1));
---CREATE TABLE t1(c1 text CONSTRAINT \"1 2\" DEFAULT (1+1));
+CREATE TABLE t1(c1 text CONSTRAINT "1 2" DEFAULT (1+1));
 CREATE TABLE t1(c1 text COLLATE nocase);
 CREATE TABLE t1(c1 text CONSTRAINT 'a x' COLLATE nocase);
 CREATE TABLE t1(c1 REFERENCES t2);
@@ -117,9 +117,22 @@ CREATE TABLE t1(c1 REFERENCES t1 DEFAULT 123 CHECK(c1 IS 'ten') UNIQUE NOT NULL 
       (column_def
         (identifier)
         (type_name
+          (identifier))
+        (column_constraint
+          (NULL)))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (type_name
+          (identifier))
+        (column_constraint
+          (CONSTRAINT)
           (identifier)
-          (identifier)))))
-  (comment)
+          (NULL)))))
   (sql_stmt
     (create_table_stmt
       (CREATE)
@@ -131,203 +144,229 @@ CREATE TABLE t1(c1 REFERENCES t1 DEFAULT 123 CHECK(c1 IS 'ten') UNIQUE NOT NULL 
           (identifier))
         (column_constraint
           (UNIQUE)))))
-    (comment)
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
+        (type_name
+          (identifier))
+        (column_constraint
+          (CONSTRAINT)
           (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (CHECK)
-            (identifier)
-            (numeric_literal)))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+          (UNIQUE)))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
+        (type_name
+          (identifier))
+        (column_constraint
+          (CHECK)
           (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (CONSTRAINT)
-            (identifier)
-            (CHECK)
-            (identifier)
-            (numeric_literal)))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+          (numeric_literal)))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
+        (type_name
+          (identifier))
+        (column_constraint
+          (CONSTRAINT)
           (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (DEFAULT)
-            (numeric_literal)))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+          (CHECK)
+          (identifier)
+          (numeric_literal)))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
-          (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (DEFAULT)
-            (signed_number
-              (numeric_literal))))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+        (type_name
+          (identifier))
+        (column_constraint
+          (DEFAULT)
+          (numeric_literal)))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
-          (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (DEFAULT)
-            (signed_number
-              (numeric_literal))))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+        (type_name
+          (identifier))
+        (column_constraint
+          (DEFAULT)
+          (signed_number
+            (numeric_literal))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
-          (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (DEFAULT)
-            (signed_number
-              (numeric_literal))))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+        (type_name
+          (identifier))
+        (column_constraint
+          (DEFAULT)
+          (signed_number
+            (numeric_literal))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
-          (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (DEFAULT)
-            (numeric_literal)
-            (numeric_literal)))))
-    (comment)
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+        (type_name
+          (identifier))
+        (column_constraint
+          (DEFAULT)
+          (signed_number
+            (numeric_literal))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
-          (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (COLLATE)
-            (collation_name
-              (identifier))))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+        (type_name
+          (identifier))
+        (column_constraint
+          (DEFAULT)
+          (numeric_literal)
+          (numeric_literal)))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
+        (type_name
+          (identifier))
+        (column_constraint
+          (CONSTRAINT)
           (identifier)
-          (type_name
-            (identifier))
-          (column_constraint
-            (CONSTRAINT)
-            (string_literal)
-            (COLLATE)
-            (collation_name
-              (identifier))))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+          (DEFAULT)
+          (numeric_literal)
+          (numeric_literal)))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
-          (identifier)
-          (column_constraint
-            (foreign_key_clause
-              (REFERENCES)
-              (identifier))))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+        (type_name
+          (identifier))
+        (column_constraint
+          (COLLATE)
+          (collation_name
+            (identifier))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
-          (identifier)
-          (column_constraint
-            (CONSTRAINT)
-            (identifier)
-            (foreign_key_clause
-              (REFERENCES)
-              (identifier))))))
-    (sql_stmt
-      (create_table_stmt
-        (CREATE)
-        (TABLE)
+        (type_name
+          (identifier))
+        (column_constraint
+          (CONSTRAINT)
+          (string_literal)
+          (COLLATE)
+          (collation_name
+            (identifier))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
         (identifier)
-        (column_def
+        (column_constraint
+          (foreign_key_clause
+            (REFERENCES)
+            (identifier))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (column_constraint
+          (CONSTRAINT)
           (identifier)
-          (column_constraint
-            (PRIMARY)
-            (KEY))
-          (column_constraint
-            (NOT)
-            (NULL))
-          (column_constraint
-            (UNIQUE ))
-            (column_constraint
-              (CHECK)
-              (identifier)
-              (IS)
-              (string_literal))
-            (column_constraint
-              (DEFAULT)
-              (numeric_literal))
-            (column_constraint
-              (foreign_key_clause
-                (REFERENCES)
-                (identifier))))))
-      (sql_stmt
-        (create_table_stmt
-          (CREATE)
-          (TABLE)
+          (foreign_key_clause
+            (REFERENCES)
+            (identifier))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (column_constraint
+          (PRIMARY)
+          (KEY))
+        (column_constraint
+          (NOT)
+          (NULL))
+        (column_constraint
+          (UNIQUE))
+        (column_constraint
+          (CHECK)
           (identifier)
-          (column_def
-            (identifier)
-            (column_constraint
-              (foreign_key_clause
-                (REFERENCES)
-                (identifier)))
-            (column_constraint
-              (DEFAULT)
-              (numeric_literal))
-            (column_constraint
-              (CHECK)
-              (identifier)
-              (IS)
-              (string_literal))
-            (column_constraint
-              (UNIQUE ))
-              (column_constraint
-                (NOT)
-                (NULL))
-              (column_constraint
-                (PRIMARY)
-                (KEY))))))
+          (IS)
+          (string_literal))
+        (column_constraint
+          (DEFAULT)
+          (numeric_literal))
+        (column_constraint
+          (foreign_key_clause
+            (REFERENCES)
+            (identifier))))))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (column_constraint
+          (foreign_key_clause
+            (REFERENCES)
+            (identifier)))
+        (column_constraint
+          (DEFAULT)
+          (numeric_literal))
+        (column_constraint
+          (CHECK)
+          (identifier)
+          (IS)
+          (string_literal))
+        (column_constraint
+          (UNIQUE))
+        (column_constraint
+          (NOT)
+          (NULL))
+        (column_constraint
+          (PRIMARY)
+          (KEY))))))
