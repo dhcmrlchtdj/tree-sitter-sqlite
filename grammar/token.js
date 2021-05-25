@@ -3,26 +3,26 @@ const { keyword } = require("./keyword")
 exports.token = {
     ...keyword,
 
-    _whitespace: ($) => /[ \t\n\f\r]/,
+    _whitespace: ($) => /[ \t\n\f\r]+/,
 
     numeric_literal: ($) => {
-        const decimal_digit = /[0-9]/
+        const decimal_digit = /[0-9]+/
         const exponent_part = seq(
             choice("e", "E"),
             optional(choice("-", "+")),
-            repeat1(decimal_digit),
+            decimal_digit,
         )
         const decimal_integer_literal = choice(
             "0",
-            seq(/[1-9]/, repeat(decimal_digit)),
+            seq(/[1-9]/, optional(decimal_digit)),
         )
         const decimal_literal = choice(
             seq(
                 decimal_integer_literal,
-                optional(seq(".", repeat(decimal_digit))),
+                optional(seq(".", optional(decimal_digit))),
                 optional(exponent_part),
             ),
-            seq(".", repeat(decimal_digit), optional(exponent_part)),
+            seq(".", optional(decimal_digit), optional(exponent_part)),
         )
 
         const hex_literal = seq(choice("0x", "0X"), /[0-9a-fA-F]+/)
