@@ -1,5 +1,6 @@
 {
   "name": "sqlite",
+  "word": "_word",
   "rules": {
     "sql_stmt_list": {
       "type": "SEQ",
@@ -982,8 +983,11 @@
               "value": "?"
             },
             {
-              "type": "PATTERN",
-              "value": "[0-9]*"
+              "type": "REPEAT",
+              "content": {
+                "type": "PATTERN",
+                "value": "[0-9]"
+              }
             }
           ]
         },
@@ -7391,6 +7395,10 @@
           ]
         }
       ]
+    },
+    "_word": {
+      "type": "PATTERN",
+      "value": "[0-9a-zA-Z_]+"
     }
   },
   "extras": [

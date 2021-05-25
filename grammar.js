@@ -33,7 +33,7 @@ module.exports = grammar({
         [$.foreign_key_clause],
     ],
 
-    // word: ($) => TODO
+    word: ($) => $._word,
 
     rules: {
         sql_stmt_list: ($) =>
@@ -42,5 +42,6 @@ module.exports = grammar({
         ...tokens,
         ...part,
         ...statement,
+        _word: ($) => /[0-9a-zA-Z_]+/,
     },
 })

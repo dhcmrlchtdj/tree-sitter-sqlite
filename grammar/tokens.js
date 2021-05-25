@@ -43,7 +43,7 @@ exports.tokens = {
     identifier: ($) => $._identifier,
 
     bind_parameter: ($) =>
-        choice(seq("?", /[0-9]*/), seq(choice(":", "@", "$"), $._identifier)),
+        choice(seq("?", repeat(/[0-9]/)), seq(choice(":", "@", "$"), $._identifier)),
 
     // https://github.com/tree-sitter/tree-sitter-javascript/blob/v0.19.0/grammar.js#L888
     comment: ($) =>
