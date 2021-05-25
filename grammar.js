@@ -32,8 +32,6 @@ module.exports = grammar({
         [$.foreign_key_clause],
     ],
 
-    // word: ($) => $.identifier,
-
     rules: {
         sql_stmt_list: ($) =>
             seq(optional($.sql_stmt), repeat(seq(";", optional($.sql_stmt)))),
