@@ -29,6 +29,7 @@ module.exports = grammar({
         [$._literal_value, $._name],
         [$._literal_value, $.signed_number],
         [$.insert_stmt, $._select_core],
+        [$.foreign_key_clause],
     ],
 
     // word: ($) => $.identifier,

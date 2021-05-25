@@ -1803,7 +1803,15 @@
           "named": true
         },
         {
+          "type": "DEFERRED",
+          "named": true
+        },
+        {
           "type": "DELETE",
+          "named": true
+        },
+        {
+          "type": "IMMEDIATE",
           "named": true
         },
         {
