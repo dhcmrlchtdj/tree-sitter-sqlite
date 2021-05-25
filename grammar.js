@@ -1,6 +1,7 @@
 const { statement } = require("./grammar/statement")
 const { part } = require("./grammar/part")
-const { token } = require("./grammar/token")
+const { keyword } = require("./grammar/keyword")
+const { tokens } = require("./grammar/tokens")
 
 module.exports = grammar({
     name: "sqlite",
@@ -32,10 +33,13 @@ module.exports = grammar({
         [$.foreign_key_clause],
     ],
 
+    // word: ($) => TODO
+
     rules: {
         sql_stmt_list: ($) =>
             seq(optional($.sql_stmt), repeat(seq(";", optional($.sql_stmt)))),
-        ...token,
+        ...keyword,
+        ...tokens,
         ...part,
         ...statement,
     },

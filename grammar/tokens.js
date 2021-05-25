@@ -1,8 +1,4 @@
-const { keyword } = require("./keyword")
-
-exports.token = {
-    ...keyword,
-
+exports.tokens = {
     _whitespace: ($) => /[ \t\n\f\r]+/,
 
     numeric_literal: ($) => {
