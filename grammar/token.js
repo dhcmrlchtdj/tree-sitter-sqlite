@@ -38,7 +38,7 @@ exports.token = {
 
     _identifier: ($) =>
         choice(
-            seq(/[a-zA-Z_]/, /[0-9a-zA-Z_]*/), // FIXME
+            seq(/[a-zA-Z_]/, /[0-9a-zA-Z_$]*/),
             seq('"', /(""|[^"])*/, '"'),
             seq("`", /(``|[^`])*/, "`"),
             seq("[", /[^\]]*/, "]"),
