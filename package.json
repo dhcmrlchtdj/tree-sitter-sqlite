@@ -1,18 +1,9 @@
 {
-    "name": "tree-sitter-sqlite",
+    "name": "tree-sitter-sql",
     "version": "0.0.1",
-    "description": "SQLite grammar for the tree-sitter parsing library",
-    "main": "bindings/node",
-    "author": "h11 <nirisix@gmail.com>",
+    "description": "SQL grammar for the tree-sitter parsing library",
+    "author": "H11",
     "license": "MIT",
-    "tree-sitter": [
-        {
-            "scope": "source.sql",
-            "file-types": [
-                "sql"
-            ]
-        }
-    ],
     "dependencies": {
         "nan": "2.14.2"
     },
@@ -20,16 +11,18 @@
         "prettier": "2.3.0",
         "tree-sitter-cli": "0.19.5"
     },
-    "prettier": {
-        "printWidth": 80,
-        "tabWidth": 4,
-        "useTabs": false,
-        "semi": false,
-        "singleQuote": false,
-        "quoteProps": "as-needed",
-        "trailingComma": "all",
-        "bracketSpacing": true,
-        "arrowParens": "always",
-        "endOfLine": "lf"
-    }
+    "tree-sitter": [
+        {
+            "scope": "source.sqlite",
+            "file-types": ["sql"],
+            "path": "sqlite",
+            "injection-regex": "^(sql)$"
+        },
+        {
+            "scope": "source.postgresql",
+            "file-types": ["sql"],
+            "path": "postgresql",
+            "injection-regex": "^(sql)$"
+        }
+    ]
 }
