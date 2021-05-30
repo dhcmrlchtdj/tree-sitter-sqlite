@@ -13,15 +13,17 @@
     },
     "tree-sitter": [
         {
-            "scope": "source.sqlite",
+            "scope": "source.sql.sqlite",
             "file-types": ["sql"],
             "path": "sqlite",
+            "highlights": "sqlite/queries/highlights.scm",
             "injection-regex": "^(sql)$"
         },
         {
-            "scope": "source.postgresql",
+            "scope": "source.sql.postgresql",
             "file-types": ["sql"],
             "path": "postgresql",
+            "highlights": "postgresql/queries/highlights.scm",
             "injection-regex": "^(sql)$"
         }
     ]
