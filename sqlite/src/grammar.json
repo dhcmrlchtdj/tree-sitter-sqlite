@@ -908,12 +908,12 @@
         }
       ]
     },
-    "_identifier": {
+    "identifier": {
       "type": "CHOICE",
       "members": [
         {
           "type": "PATTERN",
-          "value": "[a-zA-Z_][0-9a-zA-Z_$]*"
+          "value": "[_a-zA-Z\\x80-\\xFF][$_0-9a-zA-Z\\x80-\\xFF]*"
         },
         {
           "type": "SEQ",
@@ -968,10 +968,6 @@
         }
       ]
     },
-    "identifier": {
-      "type": "SYMBOL",
-      "name": "_identifier"
-    },
     "bind_parameter": {
       "type": "CHOICE",
       "members": [
@@ -999,21 +995,25 @@
               "members": [
                 {
                   "type": "STRING",
-                  "value": ":"
-                },
-                {
-                  "type": "STRING",
                   "value": "@"
                 },
                 {
                   "type": "STRING",
                   "value": "$"
+                },
+                {
+                  "type": "STRING",
+                  "value": ":"
+                },
+                {
+                  "type": "STRING",
+                  "value": "#"
                 }
               ]
             },
             {
-              "type": "SYMBOL",
-              "name": "_identifier"
+              "type": "PATTERN",
+              "value": "[$_0-9a-zA-Z\\x80-\\xFF]+"
             }
           ]
         }
@@ -7398,7 +7398,7 @@
     },
     "_word": {
       "type": "PATTERN",
-      "value": "[0-9a-zA-Z_]+"
+      "value": "[_a-zA-Z\\x80-\\xFF$@#:?][$_0-9a-zA-Z\\x80-\\xFF]*"
     }
   },
   "extras": [

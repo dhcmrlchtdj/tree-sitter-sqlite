@@ -2,7 +2,7 @@
 
 SQL grammar for the [tree-sitter](https://github.com/tree-sitter/tree-sitter) parsing library.
 
-- [x] SQLite
+- [x] SQLite (3.35.5)
 - [ ] PostgreSQL
 
 ## credit

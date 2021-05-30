@@ -223,20 +223,18 @@ module.exports = grammar({
 
         blob_literal: ($) => seq(choice("x", "X"), $._string),
 
-        _identifier: ($) =>
+        identifier: ($) =>
             choice(
-                /[a-zA-Z_][0-9a-zA-Z_$]*/,
+                /[_a-zA-Z\x80-\xFF][$_0-9a-zA-Z\x80-\xFF]*/,
                 seq('"', /(""|[^"])*/, '"'),
                 seq("`", /(``|[^`])*/, "`"),
                 seq("[", /[^\]]*/, "]"),
             ),
 
-        identifier: ($) => $._identifier,
-
         bind_parameter: ($) =>
             choice(
                 seq("?", repeat(/[0-9]/)),
-                seq(choice(":", "@", "$"), $._identifier),
+                seq(choice("@", "$", ":", "#"), /[$_0-9a-zA-Z\x80-\xFF]+/),
             ),
 
         // https://github.com/tree-sitter/tree-sitter-javascript/blob/v0.19.0/grammar.js#L888
@@ -1061,7 +1059,7 @@ module.exports = grammar({
                 ),
             ),
 
-        _word: ($) => /[0-9a-zA-Z_]+/,
+        _word: ($) => /[_a-zA-Z\x80-\xFF$@#:?][$_0-9a-zA-Z\x80-\xFF]*/,
     },
 })
 
