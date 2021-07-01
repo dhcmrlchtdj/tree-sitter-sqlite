@@ -1,9 +1,7 @@
-# tree-sitter-sql
+# tree-sitter-sqlite
 
-SQL grammar for the [tree-sitter](https://github.com/tree-sitter/tree-sitter) parsing library.
-
-- [x] SQLite (3.35.5)
-- [ ] PostgreSQL
+SQLite grammar for the [tree-sitter](https://github.com/tree-sitter/tree-sitter) parsing library.
 
 ## credit
 - https://github.com/bkiers/sqlite-parser
+- https://github.com/sqlite/sqlite/blob/version-3.35.5/src/parse.y

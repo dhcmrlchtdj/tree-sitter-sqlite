@@ -9,3 +9,5 @@ test:
 
 update_test_snapshot:
 	tree-sitter test --update
+
+.PHONY: test
