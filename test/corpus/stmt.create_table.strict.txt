@@ -1,0 +1,133 @@
+================================================================================
+stmt.create_table.strict
+================================================================================
+
+CREATE TABLE t1(a) STRICT;
+CREATE TABLE t1(a PRIMARY KEY) STRICT, WITHOUT ROWID;
+CREATE TABLE t1(a PRIMARY KEY) WITHOUT ROWID, STRICT;
+CREATE TABLE t1(a BANJO PRIMARY KEY) WITHOUT ROWID, STRICT;
+CREATE TABLE t1(a TEXT PRIMARY KEY, b INT, c INTEGER, d REAL, e BLOB, f DATE) strict;
+CREATE TABLE t1(a TEXT PRIMARY KEY, b INT, c INTEGER, d REAL, e BLOB, f TEXT(50)) WITHOUT ROWID, STRICT;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier))
+      (STRICT)))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (column_constraint
+          (PRIMARY)
+          (KEY)))
+      (STRICT)
+      (WITHOUT)
+      (ROWID)))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (column_constraint
+          (PRIMARY)
+          (KEY)))
+      (WITHOUT)
+      (ROWID)
+      (STRICT)))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (type_name
+          (identifier))
+        (column_constraint
+          (PRIMARY)
+          (KEY)))
+      (WITHOUT)
+      (ROWID)
+      (STRICT)))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (type_name
+          (identifier))
+        (column_constraint
+          (PRIMARY)
+          (KEY)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (STRICT)))
+  (sql_stmt
+    (create_table_stmt
+      (CREATE)
+      (TABLE)
+      (identifier)
+      (column_def
+        (identifier)
+        (type_name
+          (identifier))
+        (column_constraint
+          (PRIMARY)
+          (KEY)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)))
+      (column_def
+        (identifier)
+        (type_name
+          (identifier)
+          (signed_number
+            (numeric_literal))))
+      (WITHOUT)
+      (ROWID)
+      (STRICT))))

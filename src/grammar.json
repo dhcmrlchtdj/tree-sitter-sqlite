@@ -547,6 +547,10 @@
       "type": "PATTERN",
       "value": "[sS][tT][oO][rR][eE][dD]"
     },
+    "STRICT": {
+      "type": "PATTERN",
+      "value": "[sS][tT][rR][iI][cC][tT]"
+    },
     "TABLE": {
       "type": "PATTERN",
       "value": "[tT][aA][bB][lL][eE]"
@@ -1731,12 +1735,60 @@
                       "type": "SEQ",
                       "members": [
                         {
-                          "type": "SYMBOL",
-                          "name": "WITHOUT"
+                          "type": "CHOICE",
+                          "members": [
+                            {
+                              "type": "SEQ",
+                              "members": [
+                                {
+                                  "type": "SYMBOL",
+                                  "name": "WITHOUT"
+                                },
+                                {
+                                  "type": "SYMBOL",
+                                  "name": "ROWID"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "SYMBOL",
+                              "name": "STRICT"
+                            }
+                          ]
                         },
                         {
-                          "type": "SYMBOL",
-                          "name": "ROWID"
+                          "type": "REPEAT",
+                          "content": {
+                            "type": "SEQ",
+                            "members": [
+                              {
+                                "type": "STRING",
+                                "value": ","
+                              },
+                              {
+                                "type": "CHOICE",
+                                "members": [
+                                  {
+                                    "type": "SEQ",
+                                    "members": [
+                                      {
+                                        "type": "SYMBOL",
+                                        "name": "WITHOUT"
+                                      },
+                                      {
+                                        "type": "SYMBOL",
+                                        "name": "ROWID"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "type": "SYMBOL",
+                                    "name": "STRICT"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
                         }
                       ]
                     },

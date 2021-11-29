@@ -163,6 +163,7 @@ module.exports = grammar({
             "SELECT",
             "SET",
             "STORED",
+            "STRICT",
             "TABLE",
             "TEMP",
             "TEMPORARY",
@@ -335,7 +336,9 @@ module.exports = grammar({
                         commaSep($.column_def),
                         repeat(seq(",", $.table_constraint)),
                         ")",
-                        optional(seq($.WITHOUT, $.ROWID)),
+                        optional(
+                            commaSep(choice(seq($.WITHOUT, $.ROWID), $.STRICT)),
+                        ),
                     ),
                 ),
             ),

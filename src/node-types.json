@@ -788,6 +788,10 @@
           "named": true
         },
         {
+          "type": "STRICT",
+          "named": true
+        },
+        {
           "type": "TABLE",
           "named": true
         },
@@ -6286,6 +6290,10 @@
   },
   {
     "type": "STORED",
+    "named": true
+  },
+  {
+    "type": "STRICT",
     "named": true
   },
   {
