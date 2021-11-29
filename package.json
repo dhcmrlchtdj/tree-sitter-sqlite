@@ -5,16 +5,18 @@
     "author": "H11",
     "license": "MIT",
     "dependencies": {
-        "nan": "2.14.2"
+        "nan": "2.15.0"
     },
     "devDependencies": {
-        "prettier": "2.3.0",
-        "tree-sitter-cli": "0.20.0"
+        "prettier": "2.5.0",
+        "tree-sitter-cli": "0.20.1"
     },
     "tree-sitter": [
         {
             "scope": "source.sql",
-            "file-types": ["sql"],
+            "file-types": [
+                "sql"
+            ],
             "highlights": "queries/highlights.scm",
             "injection-regex": "^(sql)$"
         }
