@@ -584,6 +584,8 @@ module.exports = grammar({
                 prec.right("unary_plus", seq(choice("-", "+"), $._expr)),
                 prec.right("unary_not", seq($.NOT, $._expr)),
                 prec.left("binary_concat", seq($._expr, "||", $._expr)),
+                prec.left("binary_concat", seq($._expr, "->", $._expr)),
+                prec.left("binary_concat", seq($._expr, "->>", $._expr)),
                 prec.left(
                     "binary_times",
                     seq($._expr, choice("*", "/", "%"), $._expr),
