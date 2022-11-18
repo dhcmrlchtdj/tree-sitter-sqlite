@@ -4361,6 +4361,27 @@
                 ]
               },
               {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SEQ",
+                    "members": [
+                      {
+                        "type": "SYMBOL",
+                        "name": "DISTINCT"
+                      },
+                      {
+                        "type": "SYMBOL",
+                        "name": "FROM"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
                 "type": "SYMBOL",
                 "name": "_expr"
               }
@@ -7040,19 +7061,6 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "ON"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "_expr"
-            }
-          ]
-        },
-        {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "SYMBOL",
               "name": "USING"
             },
             {
@@ -7087,6 +7095,19 @@
             {
               "type": "STRING",
               "value": ")"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "ON"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_expr"
             }
           ]
         }
@@ -7173,6 +7194,18 @@
                   "type": "BLANK"
                 }
               ]
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "join_constraint"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
             }
           ]
         },
@@ -7244,6 +7277,18 @@
                   "type": "BLANK"
                 }
               ]
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "join_constraint"
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
             }
           ]
         },
@@ -7285,6 +7330,18 @@
                       "name": "_name"
                     }
                   ]
+                },
+                {
+                  "type": "BLANK"
+                }
+              ]
+            },
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "join_constraint"
                 },
                 {
                   "type": "BLANK"

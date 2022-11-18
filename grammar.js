@@ -1014,28 +1014,40 @@ module.exports = grammar({
 
 		table_or_subquery: ($) =>
 			choice(
-				seq(
-					$._name2,
-					optional(seq(optional($.AS), $._name)),
-					optional(
-						choice(
-							seq($.INDEXED, $.BY, $._name),
-							seq($.NOT, $.INDEXED),
+				prec.left(
+					1,
+					seq(
+						$._name2,
+						optional(seq(optional($.AS), $._name)),
+						optional(
+							choice(
+								seq($.INDEXED, $.BY, $._name),
+								seq($.NOT, $.INDEXED),
+							),
 						),
+						optional($.join_constraint),
 					),
 				),
-				seq(
-					$._name2,
-					"(",
-					commaSep($._expr),
-					")",
-					optional(seq(optional($.AS), $._name)),
+				prec.left(
+					1,
+					seq(
+						$._name2,
+						"(",
+						commaSep($._expr),
+						")",
+						optional(seq(optional($.AS), $._name)),
+						optional($.join_constraint),
+					),
 				),
-				seq(
-					"(",
-					$.select_stmt,
-					")",
-					optional(seq(optional($.AS), $._name)),
+				prec.left(
+					1,
+					seq(
+						"(",
+						$.select_stmt,
+						")",
+						optional(seq(optional($.AS), $._name)),
+						optional($.join_constraint),
+					),
 				),
 				seq("(", $._join_clause, ")"),
 			),
