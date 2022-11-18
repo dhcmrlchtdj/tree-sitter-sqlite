@@ -1,25 +1,38 @@
 {
-    "name": "tree-sitter-sqlite",
-    "version": "0.0.2",
-    "description": "SQLite grammar for the tree-sitter parsing library",
-    "author": "H11",
-    "license": "MIT",
-    "dependencies": {
-        "nan": "2.17.0"
-    },
-    "devDependencies": {
-        "prettier": "2.7.1",
-        "tree-sitter-cli": "0.20.7"
-    },
-    "tree-sitter": [
-        {
-            "scope": "source.sql",
-            "file-types": [
-                "sql"
-            ],
-            "highlights": "queries/highlights.scm",
-            "injection-regex": "^(sql)$"
-        }
-    ],
-    "main": "bindings/node"
+	"name": "tree-sitter-sqlite",
+	"version": "0.0.2",
+	"description": "SQLite grammar for the tree-sitter parsing library",
+	"author": "H11",
+	"license": "MIT",
+	"dependencies": {
+		"nan": "2.17.0"
+	},
+	"devDependencies": {
+		"prettier": "2.7.1",
+		"tree-sitter-cli": "0.20.7"
+	},
+	"tree-sitter": [
+		{
+			"scope": "source.sql",
+			"file-types": [
+				"sql"
+			],
+			"highlights": "queries/highlights.scm",
+			"injection-regex": "^(sql)$"
+		}
+	],
+	"main": "bindings/node",
+	"prettier": {
+		"printWidth": 80,
+		"tabWidth": 4,
+		"useTabs": true,
+		"semi": false,
+		"singleQuote": false,
+		"quoteProps": "as-needed",
+		"trailingComma": "all",
+		"bracketSpacing": true,
+		"bracketSameLine": false,
+		"arrowParens": "always",
+		"endOfLine": "lf"
+	}
 }
