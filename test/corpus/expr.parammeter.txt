@@ -1,0 +1,35 @@
+================================================================================
+expr.parameter
+================================================================================
+
+SELECT ?;
+SELECT ?123;
+SELECT @hello;
+SELECT :world;
+SELECT $tcl;
+-- SELECT $tcl(array); -- SQLITE_OMIT_TCL_VARIABLE https://github.com/sqlite/sqlite/blob/version-3.35.5/src/tokenize.c#L482-L495
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (bind_parameter)))
+  (comment))

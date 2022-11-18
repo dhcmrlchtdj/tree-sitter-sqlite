@@ -1,0 +1,33 @@
+================================================================================
+expr.exists
+================================================================================
+
+SELECT EXISTS (SELECT cname FROM tblname);
+SELECT NOT EXISTS (SELECT cname FROM tblname);
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (EXISTS)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (NOT)
+      (EXISTS)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier)))))))

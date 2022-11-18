@@ -1,0 +1,27 @@
+================================================================================
+expr.null
+================================================================================
+
+SELECT 1 ISNULL;
+SELECT 1 NOTNULL;
+SELECT 1 NOT NULL;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (ISNULL)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOTNULL)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (NULL))))

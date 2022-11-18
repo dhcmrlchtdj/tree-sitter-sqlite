@@ -1,0 +1,29 @@
+================================================================================
+expr.unary
+================================================================================
+
+SELECT +1;
+SELECT -2;
+SELECT NOT 3;
+SELECT ~4;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (NOT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal))))

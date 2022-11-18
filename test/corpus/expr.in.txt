@@ -1,0 +1,101 @@
+================================================================================
+expr.in
+================================================================================
+
+SELECT 1 IN (SELECT cname FROM tblname);
+SELECT 1 IN (1);
+SELECT 1 IN (1, 2, 3);
+SELECT 1 IN tblname;
+SELECT 1 IN dbname.tblname;
+SELECT 1 NOT IN (SELECT cname FROM tblname);
+SELECT 1 NOT IN (1);
+SELECT 1 NOT IN (1, 2, 3);
+SELECT 1 NOT IN tblname;
+SELECT 1 NOT IN dbname.tblname;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IN)
+      (identifier)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (select_stmt
+        (SELECT)
+        (identifier)
+        (from_clause
+          (FROM)
+          (table_or_subquery
+            (identifier))))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (IN)
+      (identifier)
+      (identifier))))

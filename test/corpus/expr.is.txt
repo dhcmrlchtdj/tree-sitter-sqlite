@@ -1,0 +1,23 @@
+================================================================================
+expr.is
+================================================================================
+
+SELECT 1 IS 2;
+SELECT 1 IS NOT 2;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IS)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (IS)
+      (NOT)
+      (numeric_literal))))

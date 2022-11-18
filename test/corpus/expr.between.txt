@@ -1,0 +1,27 @@
+================================================================================
+expr.between
+================================================================================
+
+SELECT 2 NOT BETWEEN 1 AND 3;
+SELECT 2 BETWEEN 1 AND 3;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (NOT)
+      (BETWEEN)
+      (numeric_literal)
+      (AND)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (BETWEEN)
+      (numeric_literal)
+      (AND)
+      (numeric_literal))))

@@ -1,0 +1,42 @@
+================================================================================
+expr.raise-function
+================================================================================
+
+SELECT RAISE(IGNORE);
+SELECT RAISE(ROLLBACK, 'error message');
+SELECT RAISE(ABORT, 'error message');
+SELECT RAISE(FAIL, 'error message');
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (IGNORE))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (ROLLBACK)
+        (error_message
+          (string_literal)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (ABORT)
+        (error_message
+          (string_literal)))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (raise_function
+        (RAISE)
+        (FAIL)
+        (error_message
+          (string_literal))))))

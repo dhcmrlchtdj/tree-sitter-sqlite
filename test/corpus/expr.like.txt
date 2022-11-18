@@ -1,0 +1,144 @@
+================================================================================
+expr.like
+================================================================================
+
+SELECT 'abc' LIKE 'abcd';
+SELECT 'abc' LIKE 'abcd' ESCAPE '%';
+SELECT 'abc' GLOB 'abcd';
+SELECT 'abc' GLOB 'abcd' ESCAPE '%';
+SELECT 'abc' REGEXP 'abcd';
+SELECT 'abc' REGEXP 'abcd' ESCAPE '%';
+SELECT 'abc' MATCH 'abcd';
+SELECT 'abc' MATCH 'abcd' ESCAPE '%';
+SELECT 'abc' NOT LIKE 'abcd';
+SELECT 'abc' NOT LIKE 'abcd' ESCAPE '%';
+SELECT 'abc' NOT GLOB 'abcd';
+SELECT 'abc' NOT GLOB 'abcd' ESCAPE '%';
+SELECT 'abc' NOT REGEXP 'abcd';
+SELECT 'abc' NOT REGEXP 'abcd' ESCAPE '%';
+SELECT 'abc' NOT MATCH 'abcd';
+SELECT 'abc' NOT MATCH 'abcd' ESCAPE '%';
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (LIKE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (LIKE)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (GLOB)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (GLOB)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (REGEXP)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (REGEXP)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (MATCH)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (MATCH)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (LIKE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (LIKE)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (GLOB)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (GLOB)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (REGEXP)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (REGEXP)
+      (string_literal)
+      (ESCAPE)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (MATCH)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (NOT)
+      (MATCH)
+      (string_literal)
+      (ESCAPE)
+      (string_literal))))

@@ -1,0 +1,48 @@
+================================================================================
+expr.literal-value
+================================================================================
+
+SELECT 123;
+SELECT 123.4e05;
+SELECT 'abcde';
+SELECT X'414243';
+SELECT NULL;
+SELECT CURRENT_TIME;
+SELECT CURRENT_DATE;
+SELECT CURRENT_TIMESTAMP;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (blob_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (NULL)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CURRENT_TIME)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CURRENT_DATE)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CURRENT_TIMESTAMP))))

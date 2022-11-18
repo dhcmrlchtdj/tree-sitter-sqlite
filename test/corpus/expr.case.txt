@@ -1,0 +1,116 @@
+================================================================================
+expr.case
+================================================================================
+
+SELECT CASE 'abc' WHEN 1 THEN 'true' ELSE 'false' END;
+SELECT CASE 'abc' WHEN 1 THEN 'true' END;
+SELECT CASE 'abc' WHEN 1 THEN 'true' WHEN 2 THEN 'false' ELSE 'fallback' END;
+SELECT CASE 'abc' WHEN 1 THEN 'true' WHEN 2 THEN 'false' END;
+SELECT CASE WHEN 0 THEN 'true' ELSE 'false' END;
+SELECT CASE WHEN 0 THEN 'true' END;
+SELECT CASE WHEN 0 THEN 'true' WHEN 1 THEN 'false' ELSE 'fallback' END;
+SELECT CASE WHEN 0 THEN 'true' WHEN 1 THEN 'false' END;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (ELSE)
+      (string_literal)
+      (END)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (CASE)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (WHEN)
+      (numeric_literal)
+      (THEN)
+      (string_literal)
+      (END))))

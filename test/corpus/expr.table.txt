@@ -1,8 +1,10 @@
 ================================================================================
-broken
+expr.table
 ================================================================================
 
-SELECT x -> '$';
+SELECT cname;
+SELECT tblname.cname;
+SELECT dbname.tblname.cname;
 
 --------------------------------------------------------------------------------
 
@@ -10,5 +12,15 @@ SELECT x -> '$';
   (sql_stmt
     (select_stmt
       (SELECT)
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
       (identifier)
-      (string_literal))))
+      (identifier)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (identifier)
+      (identifier))))

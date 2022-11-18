@@ -1,0 +1,50 @@
+================================================================================
+expr.signed-number
+================================================================================
+
+SELECT 0, +0, -0;
+SELECT 1, +1, -1;
+SELECT 2, +2, -2;
+SELECT 1.4, +1.4, -1.4;
+SELECT 1.5e+5, +1.5e+5, -1.5e+5;
+SELECT 0.0001, +0.0001, -0.0001;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (numeric_literal)
+      (numeric_literal)
+      (numeric_literal))))

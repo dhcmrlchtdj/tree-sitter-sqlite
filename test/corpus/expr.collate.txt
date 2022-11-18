@@ -1,0 +1,24 @@
+================================================================================
+expr.collate
+================================================================================
+
+SELECT 'hello' COLLATE nocase;
+SELECT 'hello' COLLATE binary;
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (COLLATE)
+      (collation_name
+        (identifier))))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (COLLATE)
+      (collation_name
+        (identifier)))))

@@ -1,0 +1,26 @@
+================================================================================
+expr.json-operator
+================================================================================
+
+SELECT '{"a":NULL}' -> '$.a';
+SELECT '{"a":NULL}' ->> '$.a';
+SELECT y -> '$';
+
+--------------------------------------------------------------------------------
+
+(sql_stmt_list
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (string_literal)
+      (string_literal)))
+  (sql_stmt
+    (select_stmt
+      (SELECT)
+      (identifier)
+      (string_literal))))
