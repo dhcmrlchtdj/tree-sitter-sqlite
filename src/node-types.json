@@ -150,6 +150,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -418,6 +422,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -924,6 +932,10 @@
         },
         {
           "type": "FOR",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -1493,6 +1505,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -1669,6 +1685,10 @@
         },
         {
           "type": "FILTER",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -1950,6 +1970,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -2207,6 +2231,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -2403,6 +2431,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -2587,6 +2619,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -2798,6 +2834,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -3019,6 +3059,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -3237,6 +3281,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -3421,6 +3469,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -3789,6 +3841,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -4031,6 +4087,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -4423,6 +4483,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -4623,6 +4687,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -4845,6 +4913,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
@@ -5079,6 +5151,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -5309,6 +5385,10 @@
           "named": true
         },
         {
+          "type": "FROM",
+          "named": true
+        },
+        {
           "type": "GLOB",
           "named": true
         },
@@ -5520,6 +5600,10 @@
         },
         {
           "type": "FALSE",
+          "named": true
+        },
+        {
+          "type": "FROM",
           "named": true
         },
         {
