@@ -5,11 +5,11 @@
     "author": "H11",
     "license": "MIT",
     "dependencies": {
-        "nan": "2.15.0"
+        "nan": "2.17.0"
     },
     "devDependencies": {
-        "prettier": "2.5.1",
-        "tree-sitter-cli": "0.20.4"
+        "prettier": "2.7.1",
+        "tree-sitter-cli": "0.20.7"
     },
     "tree-sitter": [
         {

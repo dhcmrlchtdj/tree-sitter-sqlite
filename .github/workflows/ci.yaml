@@ -10,19 +10,19 @@ jobs:
             matrix:
                 os:
                     - macos-11
-                    - ubuntu-20.04
+                    - ubuntu-22.04
         steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-node@v2
+            - uses: actions/checkout@v3.1.0
+            - uses: actions/setup-node@v3.5.1
               with:
-                  node-version: 16
-            - uses: actions/cache@v2
+                  node-version: 18
+            - uses: actions/cache@v3.0.11
               with:
-                  path: ~/.pnpm-store
+                  path: ~/.local/share/pnpm/store
                   key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
                   restore-keys: ${{ runner.os }}-pnpm-
             - run: |
-                  npm install -g pnpm@6
+                  corepack enable pnpm
                   pnpm install
                   pnpm store prune
             - run: make test
