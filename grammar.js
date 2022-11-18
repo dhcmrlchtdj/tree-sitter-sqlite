@@ -655,7 +655,13 @@ module.exports = grammar({
 				seq($._expr, choice($.ISNULL, $.NOTNULL, seq($.NOT, $.NULL))),
 				prec.left(
 					"binary_relation",
-					seq($._expr, $.IS, optional($.NOT), $._expr),
+					seq(
+						$._expr,
+						$.IS,
+						optional($.NOT),
+						optional(seq($.DISTINCT, $.FROM)),
+						$._expr,
+					),
 				),
 				prec.left(
 					"binary_relation",
