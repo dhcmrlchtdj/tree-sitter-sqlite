@@ -898,17 +898,21 @@
           "members": [
             {
               "type": "STRING",
-              "value": "x"
+              "value": "x'"
             },
             {
               "type": "STRING",
-              "value": "X"
+              "value": "X'"
             }
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "_string"
+          "type": "PATTERN",
+          "value": "(''|[^'])*"
+        },
+        {
+          "type": "STRING",
+          "value": "'"
         }
       ]
     },
@@ -3456,15 +3460,15 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "blob_literal"
+        },
+        {
+          "type": "SYMBOL",
           "name": "numeric_literal"
         },
         {
           "type": "SYMBOL",
           "name": "string_literal"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "blob_literal"
         },
         {
           "type": "SYMBOL",

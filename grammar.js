@@ -222,7 +222,7 @@ module.exports = grammar({
 
 		string_literal: ($) => $._string,
 
-		blob_literal: ($) => seq(choice("x", "X"), $._string),
+		blob_literal: ($) => seq(choice("x'", "X'"), /(''|[^'])*/, "'"),
 
 		identifier: ($) =>
 			choice(
