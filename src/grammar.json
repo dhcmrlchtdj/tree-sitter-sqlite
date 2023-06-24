@@ -3460,15 +3460,15 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "blob_literal"
-        },
-        {
-          "type": "SYMBOL",
           "name": "numeric_literal"
         },
         {
           "type": "SYMBOL",
           "name": "string_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "blob_literal"
         },
         {
           "type": "SYMBOL",
